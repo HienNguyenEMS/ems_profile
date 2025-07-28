@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -30,8 +29,8 @@
             color: var(--secondary-text);
             margin: 0;
             padding: 20px 0;
-            line-height: 1.6;
-            font-size: 12pt; /* Tăng size chữ */
+            line-height: 1.5; /* Giảm khoảng cách dòng */
+            font-size: 11pt;
         }
 
         .print-control-area {
@@ -64,11 +63,11 @@
             font-family: 'Poppins', sans-serif; color: var(--primary-text); margin-top: 0;
         }
         h2 { 
-            font-size: 16pt; font-weight: 700; color: var(--google-blue-dark); 
+            font-size: 15pt; font-weight: 700; color: var(--google-blue-dark); 
             padding-top: 10px; margin-bottom: 20px;
             border-top: 1px solid var(--google-blue);
         }
-        h3 { font-size: 13pt; margin-top: 0; margin-bottom: 10px; }
+        h3 { font-size: 12pt; margin-top: 0; margin-bottom: 10px; }
         p { margin-bottom: 1em; }
         ul { padding-left: 20px; margin-top: 0; }
         li { margin-bottom: 8px; }
@@ -79,17 +78,17 @@
             background: linear-gradient(to right, var(--google-blue) 25%, var(--google-red) 25%, var(--google-red) 50%, var(--google-yellow) 50%, var(--google-yellow) 75%, var(--google-green) 75%);
         }
         .profile-header {
-            display: flex; align-items: center; gap: 20px; padding-bottom: 20px; margin-bottom: 25px;
+            display: flex; align-items: center; gap: 20px; padding-bottom: 20px; margin-bottom: 20px; /* Giảm khoảng cách */
         }
         .profile-header::after { bottom: 0; }
         .profile-header .logo img { height: 50px; }
-        .profile-header .company-title h1 { font-size: 17pt; margin: 0 0 5px 0; }
+        .profile-header .company-title h1 { font-size: 16pt; margin: 0 0 5px 0; }
         .profile-header .company-title h1 .company-en { font-size: 0.8em; font-weight: 600; color: var(--secondary-text); }
-        .profile-header .company-title p.slogan { font-size: 13pt; font-weight: 400; color: var(--google-blue); margin: 0; }
+        .profile-header .company-title p.slogan { font-size: 12pt; font-weight: 400; color: var(--google-blue); margin: 0; }
 
         .profile-footer {
             padding-bottom: 10px; padding-top: 10px;
-            font-size: 10pt; color: #6C757D;
+            font-size: 9pt; color: #6C757D;
             display: flex; justify-content: space-between; align-items: center;
             width: calc(100% - 24pt); position: absolute;
             bottom: 12pt; left: 12pt;
@@ -98,16 +97,16 @@
         .profile-footer a { color: var(--google-blue); text-decoration: none; }
         .page-number { font-weight: bold; }
         
-        section { padding-top: 20px; margin-top: 25px; }
+        section { padding-top: 15px; margin-top: 20px; } /* Giảm khoảng cách */
         main > section:first-child { padding-top: 0; margin-top: 0; }
 
-        .grid-2, .grid-3, .grid-4 { display: grid; gap: 25px; }
+        .grid-2, .grid-3, .grid-4 { display: grid; gap: 20px; } /* Giảm khoảng cách */
         .grid-2 { grid-template-columns: repeat(2, 1fr); }
         .grid-3 { grid-template-columns: repeat(3, 1fr); }
         .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
         .card, .kpi-card {
-            background-color: var(--background-light); padding: 20px; border-radius: 8px;
+            background-color: var(--background-light); padding: 15px; border-radius: 8px; /* Giảm padding */
             border: 1px solid var(--google-green);
             transition: all 0.3s ease;
         }
@@ -119,10 +118,10 @@
         .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
         .kpi-card { text-align: center; }
         .kpi-card .number {
-            font-family: 'Poppins', sans-serif; font-size: 23pt; font-weight: 700;
+            font-family: 'Poppins', sans-serif; font-size: 22pt; font-weight: 700;
             color: var(--primary-text); display: block;
         }
-        .kpi-card .label { font-size: 10pt; line-height: 1.3; }
+        .kpi-card .label { font-size: 9pt; line-height: 1.3; }
         
         .icon { font-size: 1.8em; margin-bottom: 10px; }
         .grid-2 .card:nth-child(4n+1) .icon, .kpi-card:nth-child(4n+1) .icon, .contact-info-list .icon { color: var(--google-blue); }
@@ -133,15 +132,15 @@
         .contact-container {
             display: grid; grid-template-columns: 2.5fr 1fr; gap: 30px; align-items: center;
         }
-        .contact-info-list { list-style: none; padding: 0; font-size: 11pt; }
+        .contact-info-list { list-style: none; padding: 0; font-size: 10pt; }
         .contact-info-list li { display: flex; align-items: center; gap: 15px; margin-bottom: 8px; }
-        .contact-info-list .icon { font-size: 1.3em; width: 22px; text-align: center; }
+        .contact-info-list .icon { font-size: 1.2em; width: 20px; text-align: center; }
         .contact-info-list a { color: var(--secondary-text); text-decoration: none; }
         .contact-info-list a:hover { color: var(--google-blue); text-decoration: underline; }
         
         .qr-code-container { text-align: center; }
         .qr-code-container img { width: 120px; height: 120px; border: 1px solid var(--border-color); }
-        .qr-code-container p { font-size: 10pt; margin-top: 5px; color: #6C757D; }
+        .qr-code-container p { font-size: 9pt; margin-top: 5px; color: #6C757D; }
         
         .partners-grid {
             display: grid; grid-template-columns: repeat(5, 1fr);
@@ -162,7 +161,7 @@
             display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
         .tool-logo img { height: 35px; width: auto; max-width: 100%; object-fit: contain; margin-bottom: 10px; }
-        .tool-logo p { margin: 0; font-size: 10pt; font-weight: 500; color: var(--primary-text); }
+        .tool-logo p { margin: 0; font-size: 9pt; font-weight: 500; color: var(--primary-text); }
         
         .process-heading { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; }
         .process-heading h4 { margin: 0; }
@@ -177,8 +176,8 @@
             width: 80px; height: 80px; border-radius: 50%; object-fit: cover;
             margin: 0 auto 15px; border: 3px solid var(--border-color);
         }
-        .expert-card h4 { font-size: 12pt; margin-bottom: 5px; }
-        .expert-card p { font-size: 10pt; line-height: 1.4; }
+        .expert-card h4 { font-size: 11pt; margin-bottom: 5px; }
+        .expert-card p { font-size: 9pt; line-height: 1.4; }
         
         .about-grid {
             display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: center;
@@ -189,15 +188,14 @@
         }
         
         .english-text {
-            font-size: 11pt;
+            font-size: 10pt;
             color: #70757a;
-            margin-top: -5px;
             font-style: italic;
         }
 
         @media print {
             body { 
-                background-color: white; padding: 0; font-size: 12pt; 
+                background-color: white; padding: 0; font-size: 11pt; 
                 -webkit-print-color-adjust: exact; 
                 print-color-adjust: exact; 
             }
@@ -250,13 +248,11 @@
                 <div class="grid-2" style="margin-top: 25px;">
                     <div class="card">
                         <h3><i class="fas fa-bullseye icon"></i> Sứ Mệnh / Mission</h3>
-                        <p>Giúp mọi người dùng, từ cá nhân đến doanh nghiệp, khai phá và tận dụng tối đa sức mạnh của hệ sinh thái Google để giải quyết các bài toán vận hành, tự động hóa công việc và tối ưu hiệu suất.</p>
-                        <p class="english-text">To help all users, from individuals to enterprises, unlock and leverage the full power of the Google ecosystem to solve operational challenges, automate tasks, and optimize performance.</p>
+                        <p>Giúp mọi người dùng, từ cá nhân đến doanh nghiệp, khai phá và tận dụng tối đa sức mạnh của hệ sinh thái Google để giải quyết các bài toán vận hành, tự động hóa công việc và tối ưu hiệu suất. <span class="english-text">/ To help all users, from individuals to enterprises, unlock and leverage the full power of the Google ecosystem to solve operational challenges, automate tasks, and optimize performance.</span></p>
                     </div>
                     <div class="card">
                         <h3><i class="fas fa-eye icon"></i> Tầm Nhìn / Vision</h3>
-                        <p>Trở thành cầu nối hàng đầu, mang những công nghệ tiên tiến nhất của Google đến gần hơn với người dùng Việt Nam, thúc đẩy một môi trường làm việc thông minh, linh hoạt và hiệu quả.</p>
-                        <p class="english-text">To become a leading bridge, bringing Google's most advanced technologies closer to Vietnamese users, fostering a smart, flexible, and efficient working environment.</p>
+                        <p>Trở thành cầu nối hàng đầu, mang những công nghệ tiên tiến nhất của Google đến gần hơn với người dùng Việt Nam, thúc đẩy một môi trường làm việc thông minh, linh hoạt và hiệu quả. <span class="english-text">/ To become a leading bridge, bringing Google's most advanced technologies closer to Vietnamese users, fostering a smart, flexible, and efficient working environment.</span></p>
                     </div>
                 </div>
             </section>
@@ -286,22 +282,22 @@
                     <div class="kpi-card">
                         <div class="icon"><i class="fas fa-users"></i></div>
                         <span class="number">200+</span>
-                        <span class="label">Khách hàng Doanh nghiệp<br>Corporate Clients</span>
+                        <span class="label">Khách hàng Doanh nghiệp<br><span class="english-text">Corporate Clients</span></span>
                     </div>
                     <div class="kpi-card">
                         <div class="icon"><i class="fas fa-briefcase"></i></div>
                         <span class="number">250+</span>
-                        <span class="label">Dự án thành công<br>Successful Projects</span>
+                        <span class="label">Dự án thành công<br><span class="english-text">Successful Projects</span></span>
                     </div>
                     <div class="kpi-card">
                         <div class="icon"><i class="fas fa-graduation-cap"></i></div>
                         <span class="number">10.000+</span>
-                        <span class="label">Học viên đã đào tạo<br>Trained Students</span>
+                        <span class="label">Học viên đã đào tạo<br><span class="english-text">Trained Students</span></span>
                     </div>
                     <div class="kpi-card">
                         <div class="icon"><i class="fas fa-user-friends"></i></div>
                         <span class="number">35.000+</span>
-                        <span class="label">Thành viên cộng đồng<br>Community Members</span>
+                        <span class="label">Thành viên cộng đồng<br><span class="english-text">Community Members</span></span>
                     </div>
                 </div>
             </section>
@@ -333,24 +329,41 @@
                 <h2>LĨNH VỰC GIẢI PHÁP / OUR SOLUTIONS</h2>
                 <div class="grid-2">
                     <div class="card">
-                        <h3><i class="fas fa-cogs icon"></i> Tối ưu Vận hành với Google Workspace & Cloud</h3>
-                        <p>Tư vấn và triển khai trọn gói Google Workspace, giúp doanh nghiệp tối ưu hóa quy trình làm việc cộng tác, bảo mật và hiệu quả trên nền tảng đám mây.</p>
-                        <p class="english-text">We consult and provide end-to-end implementation of Google Workspace, helping businesses optimize collaboration, security, and efficiency on the cloud.</p>
+                        <h3><i class="fas fa-cogs icon"></i> Tối ưu Vận hành với Google Workspace / Optimizing Operations with Google Workspace</h3>
+                        <p>Tư vấn và triển khai trọn gói Google Workspace, giúp doanh nghiệp tối ưu hóa quy trình làm việc cộng tác, bảo mật và hiệu quả trên nền tảng đám mây. <span class="english-text">/ We consult and provide end-to-end implementation of Google Workspace, helping businesses optimize collaboration, security, and efficiency on the cloud.</span></p>
                     </div>
                      <div class="card">
-                        <h3><i class="fas fa-mobile-alt icon"></i> Xây dựng Ứng dụng tùy chỉnh trên nền tảng Google</h3>
-                        <p>Sử dụng AppSheet và Apps Script để phát triển các ứng dụng quản lý (Mini-ERP, HRM, CRM) mà không cần lập trình, tích hợp sâu vào Google Sheets và Drive.</p>
-                        <p class="english-text">Using AppSheet and Apps Script, we develop custom management applications (Mini-ERP, HRM, CRM) without coding, deeply integrated with Google Sheets and Drive.</p>
+                        <h3><i class="fas fa-mobile-alt icon"></i> Xây dựng Ứng dụng tùy chỉnh trên nền tảng Google / Building Custom Applications on the Google Platform</h3>
+                        <p>Sử dụng AppSheet và Apps Script để phát triển các ứng dụng quản lý (Mini-ERP, HRM, CRM) mà không cần lập trình, tích hợp sâu vào Google Sheets và Drive. <span class="english-text">/ Using AppSheet and Apps Script, we develop custom management applications (Mini-ERP, HRM, CRM) without coding, deeply integrated with Google Sheets and Drive.</span></p>
                     </div>
                     <div class="card">
-                        <h3><i class="fas fa-robot icon"></i> Tự động hóa Thông minh với Google AI</h3>
-                        <p>Khai thác sức mạnh của AI Agent (Gemini) để tự động hóa các tác vụ lặp lại, từ chăm sóc khách hàng, phân tích dữ liệu đến tạo báo cáo tự động.</p>
-                        <p class="english-text">We leverage the power of AI Agents (Gemini) to automate repetitive tasks, from customer care and data analysis to automated report generation.</p>
+                        <h3><i class="fas fa-robot icon"></i> Tự động hóa Thông minh với Google AI / Intelligent Automation with Google AI</h3>
+                        <p>Khai thác sức mạnh của AI Agent (Gemini) để tự động hóa các tác vụ lặp lại, từ chăm sóc khách hàng, phân tích dữ liệu đến tạo báo cáo tự động. <span class="english-text">/ We leverage the power of AI Agents (Gemini) to automate repetitive tasks, from customer care and data analysis to automated report generation.</span></p>
                     </div>
                     <div class="card">
-                        <h3><i class="fas fa-chalkboard-teacher icon"></i> Đào tạo & Nâng cao Kỹ năng Google</h3>
-                        <p>Tổ chức các khóa học thực chiến về Google Sheets, AppSheet, Looker Studio... giúp người dùng cá nhân và đội ngũ nhân sự làm chủ công cụ, tăng năng suất.</p>
-                        <p class="english-text">We offer hands-on training courses on Google Sheets, AppSheet, Looker Studio, empowering individuals and teams to master the tools and boost productivity.</p>
+                        <h3><i class="fas fa-chalkboard-teacher icon"></i> Đào tạo & Nâng cao Kỹ năng Google / Google Skills Training & Enhancement</h3>
+                        <p>Tổ chức các khóa học thực chiến về Google Sheets, AppSheet, Looker Studio... giúp người dùng cá nhân và đội ngũ nhân sự làm chủ công cụ, tăng năng suất. <span class="english-text">/ We offer hands-on training courses on Google Sheets, AppSheet, Looker Studio, empowering individuals and teams to master the tools and boost productivity.</span></p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>QUYỀN LỢI KHÁCH HÀNG / CLIENT BENEFITS</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3><i class="fas fa-ruler-combined icon"></i> Giải Pháp "May Đo" / Tailored Solutions</h3>
+                        <p>Mỗi giải pháp đều được phân tích và thiết kế dựa trên quy trình và đặc thù riêng của doanh nghiệp, không áp dụng rập khuôn. <span class="english-text">/ Each solution is analyzed and designed based on the specific processes and characteristics of the business, not a one-size-fits-all approach.</span></p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-rocket icon"></i> Triển Khai Nhanh Chóng / Rapid Deployment</h3>
+                        <p>Với lợi thế của nền tảng No-code/Low-code, chúng tôi cam kết thời gian triển khai nhanh, giúp doanh nghiệp sớm đưa vào vận hành. <span class="english-text">/ With the advantage of No-code/Low-code platforms, we commit to rapid deployment times, helping businesses go live sooner.</span></p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-hand-holding-usd icon"></i> Tối Ưu Chi Phí / Cost-Effective</h3>
+                        <p>Cung cấp giải pháp với chi phí hợp lý, phù hợp với ngân sách của các doanh nghiệp vừa và nhỏ so với các hệ thống ERP truyền thống. <span class="english-text">/ We provide solutions at a reasonable cost, suitable for the budgets of small and medium-sized enterprises compared to traditional ERP systems.</span></p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-headset icon"></i> Hỗ Trợ Tận Tâm 24/7 / Dedicated Support</h3>
+                        <p>Đội ngũ kỹ thuật luôn sẵn sàng hỗ trợ, đồng hành cùng doanh nghiệp trong suốt quá trình sử dụng, đảm bảo hệ thống hoạt động ổn định. <span class="english-text">/ Our technical team is always ready to support and accompany businesses throughout the usage process, ensuring stable system operation.</span></p>
                     </div>
                 </div>
             </section>
@@ -376,28 +389,28 @@
                             <i class="fas fa-comments icon-step step-1"></i>
                             <h4>1. Tư Vấn & Khảo Sát / Consultation</h4>
                         </div>
-                        <p>Lắng nghe, phân tích nhu cầu và các vấn đề doanh nghiệp đang gặp phải để hiểu rõ bài toán.</p>
+                        <p>Lắng nghe, phân tích nhu cầu và các vấn đề doanh nghiệp đang gặp phải để hiểu rõ bài toán. <span class="english-text">/ Listen to and analyze the client's needs and challenges to fully understand the problem.</span></p>
                     </div>
                     <div class="card">
                         <div class="process-heading">
                             <i class="fas fa-pencil-ruler icon-step step-2"></i>
                             <h4>2. Thiết Kế & Báo Giá / Design & Proposal</h4>
                         </div>
-                        <p>Đề xuất giải pháp tổng thể, thiết kế giao diện, tính năng và báo giá với chi phí tối ưu nhất.</p>
+                        <p>Đề xuất giải pháp tổng thể, thiết kế giao diện, tính năng và báo giá với chi phí tối ưu nhất. <span class="english-text">/ Propose a comprehensive solution, design the interface and features, and provide a quote with the most optimized cost.</span></p>
                     </div>
                     <div class="card">
                         <div class="process-heading">
                             <i class="fas fa-cogs icon-step step-3"></i>
                             <h4>3. Phát Triển & Triển Khai / Development</h4>
                         </div>
-                        <p>Xây dựng, kiểm thử và bàn giao sản phẩm theo đúng cam kết về tiến độ và chất lượng.</p>
+                        <p>Xây dựng, kiểm thử và bàn giao sản phẩm theo đúng cam kết về tiến độ và chất lượng. <span class="english-text">/ Build, test, and deliver the product in accordance with commitments on schedule and quality.</span></p>
                     </div>
                     <div class="card">
                         <div class="process-heading">
                             <i class="fas fa-life-ring icon-step step-4"></i>
                             <h4>4. Hỗ Trợ & Bảo Trì / Support & Maintenance</h4>
                         </div>
-                        <p>Đồng hành, bảo hành và hỗ trợ kỹ thuật trong suốt quá trình vận hành để đảm bảo hệ thống hoạt động ổn định.</p>
+                        <p>Đồng hành, bảo hành và hỗ trợ kỹ thuật trong suốt quá trình vận hành để đảm bảo hệ thống hoạt động ổn định. <span class="english-text">/ Provide ongoing companionship, warranty, and technical support throughout the operational process to ensure stable system performance.</span></p>
                     </div>
                 </div>
             </section>
@@ -428,6 +441,7 @@
         <main class="page-content">
             <section>
                 <h2>ĐỘI NGŨ CHUYÊN GIA / OUR EXPERTS</h2>
+                <p>Thành công của chúng tôi được xây dựng dựa trên nền tảng con người. Đội ngũ EMS là những chuyên gia có nhiều năm kinh nghiệm thực chiến tại các doanh nghiệp lớn và có niềm đam mê chia sẻ kiến thức. <span class="english-text">/ Our success is built on a foundation of people. The EMS team consists of experts with years of hands-on experience at large enterprises and a passion for sharing knowledge.</span></p>
                 <div class="grid-4">
                     <div class="expert-card">
                         <img src="https://gpems.net/_next/image?url=https%3A%2F%2Fadmin.gpems.net%2Fstorage%2Fuploads%2Fcourses%2Flecturers%2FdwDwZCThmWPgEM0kDi8XnYWkuLke9k-metaNzI0MjU1MTcwMTY2NzAzMTA4MC5wbmc%3D-.png&w=3840&q=75" alt="Nguyễn Tấn Hiền">
@@ -453,6 +467,7 @@
             </section>
             <section>
                 <h2>LIÊN HỆ / CONTACT</h2>
+                <p>Chúng tôi luôn sẵn sàng lắng nghe và tư vấn giải pháp phù hợp nhất cho doanh nghiệp của bạn. Hãy kết nối với EMS Solution ngay hôm nay! <span class="english-text">/ We are always ready to listen and advise on the most suitable solution for your business. Connect with EMS Solution today!</span></p>
                 <div class="contact-container">
                     <ul class="contact-info-list">
                         <li><div class="icon"><i class="fas fa-building"></i></div> <div><strong>Công ty TNHH Giải pháp số EMS</strong><br><span class="english-text" style="font-size: 9pt;">EMS Digital Solutions Co., Ltd</span></div></li>
