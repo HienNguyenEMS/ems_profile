@@ -84,7 +84,7 @@
         .profile-header .logo img { height: 50px; }
         .profile-header .company-title h1 { font-size: 16pt; margin: 0 0 5px 0; }
         .profile-header .company-title h1 .company-en { font-size: 0.8em; font-weight: 600; color: var(--secondary-text); }
-        .profile-header .company-title p.slogan { font-size: 12pt; font-weight: 500; margin: 0; color: var(--primary-text); }
+        .profile-header .company-title p.slogan { font-size: 12pt; font-weight: 400; color: var(--google-blue); margin: 0; }
 
         .profile-footer {
             padding-bottom: 10px; padding-top: 10px;
@@ -100,9 +100,10 @@
         section { padding-top: 20px; margin-top: 20px; }
         main > section:first-child { padding-top: 0; margin-top: 0; }
 
-        .grid-2, .grid-3 { display: grid; gap: 25px; }
+        .grid-2, .grid-3, .grid-4 { display: grid; gap: 25px; }
         .grid-2 { grid-template-columns: repeat(2, 1fr); }
         .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
         .card, .kpi-card {
             background-color: var(--background-light); padding: 20px; border-radius: 8px;
@@ -169,6 +170,14 @@
         .step-2 { color: var(--google-red); }
         .step-3 { color: var(--google-yellow); }
         .step-4 { color: var(--google-green); }
+        
+        .expert-card { text-align: center; }
+        .expert-card img {
+            width: 80px; height: 80px; border-radius: 50%; object-fit: cover;
+            margin: 0 auto 15px; border: 3px solid var(--border-color);
+        }
+        .expert-card h4 { font-size: 11pt; margin-bottom: 5px; }
+        .expert-card p { font-size: 9pt; line-height: 1.4; }
 
         @media print {
             body { 
@@ -382,13 +391,28 @@
         <main class="page-content">
             <section>
                 <h2>ĐỘI NGŨ CHUYÊN GIA</h2>
-                <p>Thành công của chúng tôi được xây dựng dựa trên nền tảng con người. Đội ngũ EMS là những chuyên gia có nhiều năm kinh nghiệm thực chiến tại các doanh nghiệp lớn và có niềm đam mê chia sẻ kiến thức.</p>
-                <ul>
-                    <li><strong>Nguyễn Tấn Hiền (Founder & CEO):</strong> Chuyên gia tư vấn chiến lược chuyển đổi số (Google Workspace & Cloud).</li>
-                    <li><strong>Nguyễn Văn Hòa (Co-Founder & CTO):</strong> Chuyên gia phát triển ứng dụng (AppSheet & Apps Script) và AI Agent.</li>
-                    <li><strong>Nguyễn Văn Tráng (Google Sheets Expert):</strong> Chuyên gia hàng đầu về xử lý dữ liệu và tự động hóa với Google Sheets.</li>
-                    <li><strong>Lê Anh Tuấn (Analytics Expert):</strong> Chuyên gia phân tích và trực quan hóa dữ liệu (Looker Studio).</li>
-                </ul>
+                <div class="grid-4">
+                    <div class="expert-card">
+                        <img src="https://gpems.net/_next/image?url=https%3A%2F%2Fadmin.gpems.net%2Fstorage%2Fuploads%2Fcourses%2Flecturers%2FdwDwZCThmWPgEM0kDi8XnYWkuLke9k-metaNzI0MjU1MTcwMTY2NzAzMTA4MC5wbmc%3D-.png&w=3840&q=75" alt="Nguyễn Tấn Hiền">
+                        <h4>Nguyễn Tấn Hiền</h4>
+                        <p>Founder & CEO<br>(Google Workspace & Cloud)</p>
+                    </div>
+                    <div class="expert-card">
+                        <img src="https://gpems.net/_next/image?url=https%3A%2F%2Fadmin.gpems.net%2Fstorage%2Fuploads%2Fcourses%2Flecturers%2FmlXRjIPyPsdcucphnW5fNbCrq9IRoH-metaMTkwMjE3NjgyNzE2NzE1MzM0MzAuanBn-.jpg&w=3840&q=75" alt="Nguyễn Văn Hòa">
+                        <h4>Nguyễn Văn Hòa</h4>
+                        <p>Co-Founder & CTO<br>(AppSheet, Apps Script & AI)</p>
+                    </div>
+                    <div class="expert-card">
+                        <img src="https://gpems.net/_next/image?url=https%3A%2F%2Fadmin.gpems.net%2Fstorage%2Fuploads%2Fcourses%2Flecturers%2FvvOGk1ZcVjmDQHINibww4X7qdCxPwT-metac2NyZWVuc2hvdF8xNzI5MjQyMTI4LnBuZw%3D%3D-.png&w=3840&q=75" alt="Nguyễn Văn Tráng">
+                        <h4>Nguyễn Văn Tráng</h4>
+                        <p>Google Sheets Expert</p>
+                    </div>
+                    <div class="expert-card">
+                        <img src="https://gpems.net/_next/image?url=https%3A%2F%2Fadmin.gpems.net%2Fstorage%2Fuploads%2Fcourses%2Flecturers%2Fyi9klBFRfQeqdwI02cMJ3SNWMM9Qcx-metaNjcwMTg1ODkxNjgyMDg2OTExLmpwZw%3D%3D-.jpg&w=3840&q=75" alt="Lê Anh Tuấn">
+                        <h4>Lê Anh Tuấn</h4>
+                        <p>Analytics Expert<br>(Looker Studio)</p>
+                    </div>
+                </div>
             </section>
             <section>
                 <h2>KHÁCH HÀNG & ĐỐI TÁC TIÊU BIỂU</h2>
