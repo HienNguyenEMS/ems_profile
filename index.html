@@ -178,6 +178,14 @@
         }
         .expert-card h4 { font-size: 11pt; margin-bottom: 5px; }
         .expert-card p { font-size: 9pt; line-height: 1.4; }
+        
+        .about-grid {
+            display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: center;
+        }
+        .about-image img {
+            width: 100%; border-radius: 8px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+        }
 
         @media print {
             body { 
@@ -218,10 +226,17 @@
         <main class="page-content">
             <section>
                 <h2>VỀ CHÚNG TÔI</h2>
-                <p>
-                    Thành lập từ năm 2021, <strong>EMS Solution</strong> là chuyên gia về các giải pháp trên hệ sinh thái Google, giúp người dùng cá nhân và doanh nghiệp bứt phá công việc, tăng năng suất. Chúng tôi cung cấp dịch vụ toàn diện từ tư vấn, đào tạo đến phát triển ứng dụng dựa trên các nền tảng miễn phí hoặc trả phí như <strong>Google Workspace</strong> và <strong>Google Cloud</strong>.
-                </p>
-                <div class="grid-2">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Thành lập từ năm 2021, <strong>EMS Solution</strong> là chuyên gia về các giải pháp trên hệ sinh thái Google, giúp người dùng cá nhân và doanh nghiệp bứt phá công việc, tăng năng suất. Chúng tôi cung cấp dịch vụ toàn diện từ tư vấn, đào tạo đến phát triển ứng dụng dựa trên các nền tảng miễn phí hoặc trả phí như <strong>Google Workspace</strong> và <strong>Google Cloud</strong>.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://gpems.net/metaImage.png" alt="EMS Solution Infographic">
+                    </div>
+                </div>
+                <div class="grid-2" style="margin-top: 25px;">
                     <div class="card">
                         <h3><i class="fas fa-bullseye icon"></i> Sứ Mệnh</h3>
                         <p>Giúp mọi người dùng, từ cá nhân đến doanh nghiệp, khai phá và tận dụng tối đa sức mạnh của hệ sinh thái Google để giải quyết các bài toán vận hành, tự động hóa công việc và tối ưu hiệu suất.</p>
@@ -233,7 +248,10 @@
                 </div>
             </section>
             <section>
-                <h2>NĂNG LỰC CỐT LÕI</h2>
+                <h2>GIÁ TRỊ CỐT LÕI</h2>
+                <p>
+                    Tại EMS Solution, chúng tôi không chỉ là một công ty công nghệ hay đào tạo. Sứ mệnh của chúng tôi gắn liền với cộng đồng "Số hóa quy trình" - những người đang làm việc với các ứng dụng Google hàng ngày. Chúng tôi nỗ lực để giúp mỗi cá nhân và doanh nghiệp gia tăng giá trị, bứt phá năng suất và tiết kiệm chi phí vận hành. Những con số dưới đây là minh chứng cho sự tin tưởng của cộng đồng và cam kết của chúng tôi trong việc mang lại giá trị thực tiễn cho từng khách hàng và học viên.
+                </p>
                 <div class="kpi-grid">
                     <div class="kpi-card">
                         <div class="icon"><i class="fas fa-users"></i></div>
@@ -256,9 +274,6 @@
                         <span class="label">Thành viên cộng đồng</span>
                     </div>
                 </div>
-                <p style="text-align: center; margin-top: 20px; font-size: 10pt;">
-                    Những con số này là minh chứng cho sự tin tưởng của cộng đồng, kinh nghiệm triển khai thực tế và cam kết của chúng tôi trong việc mang lại giá trị cho từng khách hàng và học viên.
-                </p>
             </section>
         </main>
         <footer class="profile-footer">
