@@ -555,18 +555,37 @@
             margin: 0;
             padding: 0;
         }
+body.slide-view .a4-container {
+    width: 96%;
+    height: 96%;
+    margin: auto;
+    box-shadow: none;
+    min-height: auto;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 12px;
+    background-color: white;
+    transform: none; /* bỏ scale gây cắt nội dung */
+    zoom: 1.15; /* phóng to toàn nội dung nhẹ nhàng, không cắt */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        body.slide-view .a4-container {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            box-shadow: none;
-            min-height: auto;
-            padding: 25px;
-            box-sizing: border-box;
-            transform: scale(1.15);
-            transform-origin: center center;
-        }
+/* Giúp chữ lớn hơn nhưng không vỡ layout */
+body.slide-view {
+    font-size: 1.25em;
+    line-height: 1.5;
+}
+
+body.slide-view .page-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 30px;
+}
+
 
         /* Increased font sizes for slide view */
         body.slide-view h1 {
