@@ -490,7 +490,10 @@
         body.slide-view {
             background-color: #000;
             padding: 0;
+            margin: 0;
             overflow: hidden;
+            width: 100vw;
+            height: 100vh;
         }
 
         body.slide-view .view-controls {
@@ -511,6 +514,8 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            margin: 0;
+            padding: 0;
         }
 
         body.slide-view .slide-wrapper {
@@ -542,15 +547,13 @@
         }
 
         body.slide-view .slide-content {
-            width: 90%;
-            max-width: 90vw;
-            height: 90vh;
-            max-height: calc(90vw * 9/16);
+            width: 100%;
+            height: 100%;
             background-color: white;
-            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             position: relative;
+            margin: 0;
+            padding: 0;
         }
 
         body.slide-view .a4-container {
@@ -559,6 +562,85 @@
             margin: 0;
             box-shadow: none;
             min-height: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Increased font sizes for slide view */
+        body.slide-view h1 {
+            font-size: 19pt !important;
+        }
+        
+        body.slide-view h2 {
+            font-size: 18pt !important;
+        }
+        
+        body.slide-view h3 {
+            font-size: 15pt !important;
+        }
+        
+        body.slide-view h4 {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view p {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .english-text {
+            font-size: 13pt !important;
+        }
+        
+        body.slide-view .kpi-card .number {
+            font-size: 25pt !important;
+        }
+        
+        body.slide-view .kpi-card .label {
+            font-size: 12pt !important;
+        }
+        
+        body.slide-view .contact-info-list {
+            font-size: 13pt !important;
+        }
+        
+        body.slide-view .profile-footer {
+            font-size: 12pt !important;
+        }
+        
+        body.slide-view .tool-logo p {
+            font-size: 12pt !important;
+        }
+        
+        body.slide-view .expert-card h4 {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .expert-card p {
+            font-size: 12pt !important;
+        }
+        
+        body.slide-view .flow-solution h3 {
+            font-size: 17pt !important;
+        }
+        
+        body.slide-view .flow-solution p {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .flow-step h4 {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .flow-step p {
+            font-size: 13pt !important;
+        }
+        
+        body.slide-view .flow-use-case h4 {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .flow-use-case p {
+            font-size: 13pt !important;
         }
 
         body.slide-view .slide-nav {
@@ -643,6 +725,39 @@
 
         body.slide-view .fullscreen-btn:hover {
             background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Fullscreen styles */
+        body.slide-view:fullscreen {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.slide-view:-webkit-full-screen {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.slide-view:-moz-full-screen {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.slide-view:-ms-fullscreen {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
         }
 
         /* Landing Page View Styles */
@@ -791,6 +906,109 @@
             60% {
                 transform: translateY(-10px) translateX(-50%);
             }
+        }
+
+        /* New Flow Solution Styles */
+        .flow-solution {
+            background-color: #f0f7ff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid var(--google-blue);
+        }
+
+        .flow-solution h3 {
+            color: var(--google-blue-dark);
+            font-size: 14pt;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .flow-solution .flow-icon {
+            color: var(--google-blue);
+            font-size: 1.5em;
+        }
+
+        .flow-diagram {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .flow-step {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            width: 18%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .flow-step h4 {
+            margin: 0 0 10px;
+            font-size: 11pt;
+            color: var(--primary-text);
+        }
+
+        .flow-step p {
+            font-size: 9pt;
+            margin: 0;
+        }
+
+        .flow-arrow {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--google-blue);
+            z-index: 1;
+        }
+
+        .flow-arrow::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid var(--google-blue);
+        }
+
+        .flow-use-cases {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .flow-use-case {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .flow-use-case h4 {
+            font-size: 11pt;
+            margin: 0 0 10px;
+            color: var(--google-blue-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .flow-use-case p {
+            font-size: 9pt;
+            margin: 0;
         }
 
         @media print {
@@ -956,6 +1174,60 @@
                                         <p>Các khóa học thực chiến về Google Sheets, AppSheet, Looker Studio... giúp người dùng cá nhân và đội ngũ nhân sự làm chủ công cụ, tăng năng suất. <span class="english-text">/ We offer hands-on training courses on Google Sheets, AppSheet, Looker Studio, empowering individuals and teams to master the tools and boost productivity.</span></p>
                                     </div>
                                 </div>
+                                
+                                <!-- New Flow Solution Section -->
+                                <div class="flow-solution">
+                                    <h3><i class="fas fa-project-diagram flow-icon"></i> Flow tự động số hóa quy trình / Automated Process Digitization Flow</h3>
+                                    <p>
+                                        Giải pháp <strong>Flow</strong> của EMS Solution là một hệ sinh thái tích hợp hoàn chỉnh, kết nối sức mạnh của <strong>Google AppSheet</strong>, <strong>Google Workspace</strong>, <strong>AI Agent</strong> và <strong>Zalo OA</strong> để tự động hóa toàn diện quy trình vận hành và bán hàng. Flow giúp doanh nghiệp chuyển đổi từ quy trình thủ công sang hệ thống số hóa thông minh, giảm thiểu sai sót và tăng hiệu suất.
+                                    </p>
+                                    <p class="english-text">
+                                        The <strong>Flow</strong> solution by EMS Solution is a complete integrated ecosystem that connects the power of <strong>Google AppSheet</strong>, <strong>Google Workspace</strong>, <strong>AI Agent</strong> and <strong>Zalo OA</strong> to comprehensively automate operational and sales processes. Flow helps businesses transition from manual processes to intelligent digitized systems, reducing errors and increasing efficiency.
+                                    </p>
+                                    
+                                    <div class="flow-diagram">
+                                        <div class="flow-arrow"></div>
+                                        <div class="flow-step">
+                                            <h4>Thu thập dữ liệu</h4>
+                                            <p>Google Forms<br>AppSheet</p>
+                                        </div>
+                                        <div class="flow-step">
+                                            <h4>Xử lý & Phân tích</h4>
+                                            <p>Google Sheets<br>AI Agent</p>
+                                        </div>
+                                        <div class="flow-step">
+                                            <h4>Phê duyệt & Điều phối</h4>
+                                            <p>Google Workspace<br>Apps Script</p>
+                                        </div>
+                                        <div class="flow-step">
+                                            <h4>Thông báo & Tương tác</h4>
+                                            <p>Zalo OA<br>Gmail</p>
+                                        </div>
+                                        <div class="flow-step">
+                                            <h4>Báo cáo & Tối ưu</h4>
+                                            <p>Looker Studio<br>AI Analytics</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flow-use-cases">
+                                        <div class="flow-use-case">
+                                            <h4><i class="fas fa-industry"></i> Ứng dụng trong Sản xuất</h4>
+                                            <p>
+                                                <strong>Quản lý chuỗi cung ứng:</strong> Theo dõi nguyên vật liệu, tự động đặt hàng khi tồn kho thấp.<br>
+                                                <strong>Kiểm soát chất lượng:</strong> Ghi nhận lỗi sản xuất, phân tích nguyên nhân và đề xuất cải tiến.<br>
+                                                <strong>Bảo trì thiết bị:</strong> Lên lịch bảo trì, theo dõi lịch sử và cảnh báo hỏng hóc.
+                                            </p>
+                                        </div>
+                                        <div class="flow-use-case">
+                                            <h4><i class="fas fa-shopping-cart"></i> Ứng dụng trong Bán hàng</h4>
+                                            <p>
+                                                <strong>Quản lý đơn hàng:</strong> Tự động xác nhận đơn, cập nhật tồn kho và thông báo vận chuyển.<br>
+                                                <strong>Chăm sóc khách hàng:</strong> Phân loại yêu cầu, tự động phản hồi qua Zalo OA và chuyển cho bộ phận phù hợp.<br>
+                                                <strong>Báo cáo doanh số:</strong> Tổng hợp dữ liệu từ nhiều nguồn, phân tích hiệu quả và dự báo xu hướng.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </section>
                         </main>
                         <footer class="profile-footer">
@@ -981,12 +1253,12 @@
                             <section>
                                 <h2>CÔNG CỤ & NỀN TẢNG / TOOLS & PLATFORMS</h2>
                                 <div class="tech-stack-grid">
-                                    <div class="tool-logo"><img src="https://nforceit.com.au/wp-content/uploads/2023/10/nforceit-partner-google-workspace-logo-800x400.png" alt="Google Workspace"><p>Google Workspace</p></div>
-                                    <div class="tool-logo"><img src="https://cdn-1.webcatalog.io/catalog/appsheet/appsheet-icon-filled-256.png" alt="AppSheet"><p>AppSheet</p></div>
-                                    <div class="tool-logo"><img src="https://images.seeklogo.com/logo-png/61/2/looker-studio-logo-png_seeklogo-617989.png" alt="Looker Studio"><p>Looker Studio</p></div>
-                                    <div class="tool-logo"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" alt="Apps Script"><p>Apps Script</p></div>
-                                    <div class="tool-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
-                                    <div class="tool-logo"><img src="https://images.icon-icons.com/2699/PNG/512/google_cloud_logo_icon_170066.png" alt="Google Cloud"><p>Google Cloud</p></div>
+                                    <div class="tool-logo"><img src="https://www.google.com/images/icons/product/workspaces-16.svg" alt="Google Workspace"><p>Google Workspace</p></div>
+                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/dashboard_black_48dp.png" alt="AppSheet"><p>AppSheet</p></div>
+                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/bar_chart_black_48dp.png" alt="Looker Studio"><p>Looker Studio</p></div>
+                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/code_black_48dp.png" alt="Apps Script"><p>Apps Script</p></div>
+                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/smart_toy_black_48dp.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
+                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/cloud_black_48dp.png" alt="Google Cloud"><p>Google Cloud</p></div>
                                 </div>
                             </section>
                             <section>
@@ -1034,11 +1306,11 @@
                             <section>
                                 <h2>ĐỐI TÁC TIÊU BIỂU / KEY PARTNERS</h2>
                                 <div class="partners-grid">
-                                    <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://rubee.com.vn/admin/webroot/upload/image//images/tin-tuc/vietnam-airlines-logo-2.png"/></div>
-                                    <div class="partner-logo"><img alt="Logo EVN" src="https://www.evn.com.vn//userfile/User/tcdl/images/2023/4/14042023_LogoEVN_Ngang_FULL.jpg"/></div>
-                                    <div class="partner-logo"><img alt="Logo Jollibee" src="https://brandlogos.net/wp-content/uploads/2025/05/jollibee_horizontal-logo_brandlogos.net_lrab6.png"/></div>
-                                    <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://i0.wp.com/www.globalsafe.vn/noidung/uploads/2017/10/thiet-ke-logo-baoviet.png?fit=438%2C388&ssl=1"/></div>
-                                    <div class="partner-logo"><img alt="HCDC" src="https://hcdc.vn/public/img/images/news/2019/11/news-1569819039115.png"/></div>
+                                    <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://upload.wikimedia.org/wikipedia/vi/thumb/b/b5/Vietnam_Airlines_Logo.svg/2560px-Vietnam_Airlines_Logo.svg.png"/></div>
+                                    <div class="partner-logo"><img alt="Logo EVN" src="https://upload.wikimedia.org/wikipedia/vi/thumb/6/69/EVN_Logo.svg/1200px-EVN_Logo.svg.png"/></div>
+                                    <div class="partner-logo"><img alt="Logo Jollibee" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Jollibee_logo.svg/1200px-Jollibee_logo.svg.png"/></div>
+                                    <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://upload.wikimedia.org/wikipedia/vi/thumb/2/28/Bao_Viet_Logo.svg/1200px-Bao_Viet_Logo.svg.png"/></div>
+                                    <div class="partner-logo"><img alt="HCDC" src="https://hochiminhcity.gov.vn/documents/20182/4377396/logo_hcdc.png"/></div>
                                 </div>
 
                                 <h2>QUY TRÌNH LÀM VIỆC / OUR WORKFLOW</h2>
@@ -1302,6 +1574,60 @@
                             <p>Các khóa học thực chiến về Google Sheets, AppSheet, Looker Studio... giúp người dùng cá nhân và đội ngũ nhân sự làm chủ công cụ, tăng năng suất. <span class="english-text">/ We offer hands-on training courses on Google Sheets, AppSheet, Looker Studio, empowering individuals and teams to master the tools and boost productivity.</span></p>
                         </div>
                     </div>
+                    
+                    <!-- New Flow Solution Section -->
+                    <div class="flow-solution">
+                        <h3><i class="fas fa-project-diagram flow-icon"></i> Flow tự động số hóa quy trình / Automated Process Digitization Flow</h3>
+                        <p>
+                            Giải pháp <strong>Flow</strong> của EMS Solution là một hệ sinh thái tích hợp hoàn chỉnh, kết nối sức mạnh của <strong>Google AppSheet</strong>, <strong>Google Workspace</strong>, <strong>AI Agent</strong> và <strong>Zalo OA</strong> để tự động hóa toàn diện quy trình vận hành và bán hàng. Flow giúp doanh nghiệp chuyển đổi từ quy trình thủ công sang hệ thống số hóa thông minh, giảm thiểu sai sót và tăng hiệu suất.
+                        </p>
+                        <p class="english-text">
+                            The <strong>Flow</strong> solution by EMS Solution is a complete integrated ecosystem that connects the power of <strong>Google AppSheet</strong>, <strong>Google Workspace</strong>, <strong>AI Agent</strong> and <strong>Zalo OA</strong> to comprehensively automate operational and sales processes. Flow helps businesses transition from manual processes to intelligent digitized systems, reducing errors and increasing efficiency.
+                        </p>
+                        
+                        <div class="flow-diagram">
+                            <div class="flow-arrow"></div>
+                            <div class="flow-step">
+                                <h4>Thu thập dữ liệu</h4>
+                                <p>Google Forms<br>AppSheet</p>
+                            </div>
+                            <div class="flow-step">
+                                <h4>Xử lý & Phân tích</h4>
+                                <p>Google Sheets<br>AI Agent</p>
+                            </div>
+                            <div class="flow-step">
+                                <h4>Phê duyệt & Điều phối</h4>
+                                <p>Google Workspace<br>Apps Script</p>
+                            </div>
+                            <div class="flow-step">
+                                <h4>Thông báo & Tương tác</h4>
+                                <p>Zalo OA<br>Gmail</p>
+                            </div>
+                            <div class="flow-step">
+                                <h4>Báo cáo & Tối ưu</h4>
+                                <p>Looker Studio<br>AI Analytics</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-use-cases">
+                            <div class="flow-use-case">
+                                <h4><i class="fas fa-industry"></i> Ứng dụng trong Sản xuất</h4>
+                                <p>
+                                    <strong>Quản lý chuỗi cung ứng:</strong> Theo dõi nguyên vật liệu, tự động đặt hàng khi tồn kho thấp.<br>
+                                    <strong>Kiểm soát chất lượng:</strong> Ghi nhận lỗi sản xuất, phân tích nguyên nhân và đề xuất cải tiến.<br>
+                                    <strong>Bảo trì thiết bị:</strong> Lên lịch bảo trì, theo dõi lịch sử và cảnh báo hỏng hóc.
+                                </p>
+                            </div>
+                            <div class="flow-use-case">
+                                <h4><i class="fas fa-shopping-cart"></i> Ứng dụng trong Bán hàng</h4>
+                                <p>
+                                    <strong>Quản lý đơn hàng:</strong> Tự động xác nhận đơn, cập nhật tồn kho và thông báo vận chuyển.<br>
+                                    <strong>Chăm sóc khách hàng:</strong> Phân loại yêu cầu, tự động phản hồi qua Zalo OA và chuyển cho bộ phận phù hợp.<br>
+                                    <strong>Báo cáo doanh số:</strong> Tổng hợp dữ liệu từ nhiều nguồn, phân tích hiệu quả và dự báo xu hướng.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <footer class="profile-footer">
@@ -1323,12 +1649,12 @@
                 <section>
                     <h2>CÔNG CỤ & NỀN TẢNG / TOOLS & PLATFORMS</h2>
                     <div class="tech-stack-grid">
-                        <div class="tool-logo"><img src="https://nforceit.com.au/wp-content/uploads/2023/10/nforceit-partner-google-workspace-logo-800x400.png" alt="Google Workspace"><p>Google Workspace</p></div>
-                        <div class="tool-logo"><img src="https://cdn-1.webcatalog.io/catalog/appsheet/appsheet-icon-filled-256.png" alt="AppSheet"><p>AppSheet</p></div>
-                        <div class="tool-logo"><img src="https://images.seeklogo.com/logo-png/61/2/looker-studio-logo-png_seeklogo-617989.png" alt="Looker Studio"><p>Looker Studio</p></div>
-                        <div class="tool-logo"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" alt="Apps Script"><p>Apps Script</p></div>
-                        <div class="tool-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
-                        <div class="tool-logo"><img src="https://images.icon-icons.com/2699/PNG/512/google_cloud_logo_icon_170066.png" alt="Google Cloud"><p>Google Cloud</p></div>
+                        <div class="tool-logo"><img src="https://www.google.com/images/icons/product/workspaces-16.svg" alt="Google Workspace"><p>Google Workspace</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/dashboard_black_48dp.png" alt="AppSheet"><p>AppSheet</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/bar_chart_black_48dp.png" alt="Looker Studio"><p>Looker Studio</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/code_black_48dp.png" alt="Apps Script"><p>Apps Script</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/smart_toy_black_48dp.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/cloud_black_48dp.png" alt="Google Cloud"><p>Google Cloud</p></div>
                     </div>
                 </section>
                 <section>
@@ -1372,11 +1698,11 @@
                 <section>
                     <h2>ĐỐI TÁC TIÊU BIỂU / KEY PARTNERS</h2>
                     <div class="partners-grid">
-                        <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://rubee.com.vn/admin/webroot/upload/image//images/tin-tuc/vietnam-airlines-logo-2.png"/></div>
-                        <div class="partner-logo"><img alt="Logo EVN" src="https://www.evn.com.vn//userfile/User/tcdl/images/2023/4/14042023_LogoEVN_Ngang_FULL.jpg"/></div>
-                        <div class="partner-logo"><img alt="Logo Jollibee" src="https://brandlogos.net/wp-content/uploads/2025/05/jollibee_horizontal-logo_brandlogos.net_lrab6.png"/></div>
-                        <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://i0.wp.com/www.globalsafe.vn/noidung/uploads/2017/10/thiet-ke-logo-baoviet.png?fit=438%2C388&ssl=1"/></div>
-                        <div class="partner-logo"><img alt="HCDC" src="https://hcdc.vn/public/img/images/news/2019/11/news-1569819039115.png"/></div>
+                        <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://upload.wikimedia.org/wikipedia/vi/thumb/b/b5/Vietnam_Airlines_Logo.svg/2560px-Vietnam_Airlines_Logo.svg.png"/></div>
+                        <div class="partner-logo"><img alt="Logo EVN" src="https://upload.wikimedia.org/wikipedia/vi/thumb/6/69/EVN_Logo.svg/1200px-EVN_Logo.svg.png"/></div>
+                        <div class="partner-logo"><img alt="Logo Jollibee" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Jollibee_logo.svg/1200px-Jollibee_logo.svg.png"/></div>
+                        <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://upload.wikimedia.org/wikipedia/vi/thumb/2/28/Bao_Viet_Logo.svg/1200px-Bao_Viet_Logo.svg.png"/></div>
+                        <div class="partner-logo"><img alt="HCDC" src="https://hochiminhcity.gov.vn/documents/20182/4377396/logo_hcdc.png"/></div>
                     </div>
 
                     <h2>QUY TRÌNH LÀM VIỆC / OUR WORKFLOW</h2>
@@ -1603,6 +1929,60 @@
                             <p>Các khóa học thực chiến về Google Sheets, AppSheet, Looker Studio... giúp người dùng cá nhân và đội ngũ nhân sự làm chủ công cụ, tăng năng suất. <span class="english-text">/ We offer hands-on training courses on Google Sheets, AppSheet, Looker Studio, empowering individuals and teams to master the tools and boost productivity.</span></p>
                         </div>
                     </div>
+                    
+                    <!-- New Flow Solution Section -->
+                    <div class="flow-solution">
+                        <h3><i class="fas fa-project-diagram flow-icon"></i> Flow tự động số hóa quy trình / Automated Process Digitization Flow</h3>
+                        <p>
+                            Giải pháp <strong>Flow</strong> của EMS Solution là một hệ sinh thái tích hợp hoàn chỉnh, kết nối sức mạnh của <strong>Google AppSheet</strong>, <strong>Google Workspace</strong>, <strong>AI Agent</strong> và <strong>Zalo OA</strong> để tự động hóa toàn diện quy trình vận hành và bán hàng. Flow giúp doanh nghiệp chuyển đổi từ quy trình thủ công sang hệ thống số hóa thông minh, giảm thiểu sai sót và tăng hiệu suất.
+                        </p>
+                        <p class="english-text">
+                            The <strong>Flow</strong> solution by EMS Solution is a complete integrated ecosystem that connects the power of <strong>Google AppSheet</strong>, <strong>Google Workspace</strong>, <strong>AI Agent</strong> and <strong>Zalo OA</strong> to comprehensively automate operational and sales processes. Flow helps businesses transition from manual processes to intelligent digitized systems, reducing errors and increasing efficiency.
+                        </p>
+                        
+                        <div class="flow-diagram">
+                            <div class="flow-arrow"></div>
+                            <div class="flow-step">
+                                <h4>Thu thập dữ liệu</h4>
+                                <p>Google Forms<br>AppSheet</p>
+                            </div>
+                            <div class="flow-step">
+                                <h4>Xử lý & Phân tích</h4>
+                                <p>Google Sheets<br>AI Agent</p>
+                            </div>
+                            <div class="flow-step">
+                                <h4>Phê duyệt & Điều phối</h4>
+                                <p>Google Workspace<br>Apps Script</p>
+                            </div>
+                            <div class="flow-step">
+                                <h4>Thông báo & Tương tác</h4>
+                                <p>Zalo OA<br>Gmail</p>
+                            </div>
+                            <div class="flow-step">
+                                <h4>Báo cáo & Tối ưu</h4>
+                                <p>Looker Studio<br>AI Analytics</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-use-cases">
+                            <div class="flow-use-case">
+                                <h4><i class="fas fa-industry"></i> Ứng dụng trong Sản xuất</h4>
+                                <p>
+                                    <strong>Quản lý chuỗi cung ứng:</strong> Theo dõi nguyên vật liệu, tự động đặt hàng khi tồn kho thấp.<br>
+                                    <strong>Kiểm soát chất lượng:</strong> Ghi nhận lỗi sản xuất, phân tích nguyên nhân và đề xuất cải tiến.<br>
+                                    <strong>Bảo trì thiết bị:</strong> Lên lịch bảo trì, theo dõi lịch sử và cảnh báo hỏng hóc.
+                                </p>
+                            </div>
+                            <div class="flow-use-case">
+                                <h4><i class="fas fa-shopping-cart"></i> Ứng dụng trong Bán hàng</h4>
+                                <p>
+                                    <strong>Quản lý đơn hàng:</strong> Tự động xác nhận đơn, cập nhật tồn kho và thông báo vận chuyển.<br>
+                                    <strong>Chăm sóc khách hàng:</strong> Phân loại yêu cầu, tự động phản hồi qua Zalo OA và chuyển cho bộ phận phù hợp.<br>
+                                    <strong>Báo cáo doanh số:</strong> Tổng hợp dữ liệu từ nhiều nguồn, phân tích hiệu quả và dự báo xu hướng.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <footer class="profile-footer">
@@ -1624,12 +2004,12 @@
                 <section>
                     <h2>CÔNG CỤ & NỀN TẢNG / TOOLS & PLATFORMS</h2>
                     <div class="tech-stack-grid">
-                        <div class="tool-logo"><img src="https://nforceit.com.au/wp-content/uploads/2023/10/nforceit-partner-google-workspace-logo-800x400.png" alt="Google Workspace"><p>Google Workspace</p></div>
-                        <div class="tool-logo"><img src="https://cdn-1.webcatalog.io/catalog/appsheet/appsheet-icon-filled-256.png" alt="AppSheet"><p>AppSheet</p></div>
-                        <div class="tool-logo"><img src="https://images.seeklogo.com/logo-png/61/2/looker-studio-logo-png_seeklogo-617989.png" alt="Looker Studio"><p>Looker Studio</p></div>
-                        <div class="tool-logo"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" alt="Apps Script"><p>Apps Script</p></div>
-                        <div class="tool-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
-                        <div class="tool-logo"><img src="https://images.icon-icons.com/2699/PNG/512/google_cloud_logo_icon_170066.png" alt="Google Cloud"><p>Google Cloud</p></div>
+                        <div class="tool-logo"><img src="https://www.google.com/images/icons/product/workspaces-16.svg" alt="Google Workspace"><p>Google Workspace</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/dashboard_black_48dp.png" alt="AppSheet"><p>AppSheet</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/bar_chart_black_48dp.png" alt="Looker Studio"><p>Looker Studio</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/code_black_48dp.png" alt="Apps Script"><p>Apps Script</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/smart_toy_black_48dp.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
+                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/cloud_black_48dp.png" alt="Google Cloud"><p>Google Cloud</p></div>
                     </div>
                 </section>
                 <section>
@@ -1673,11 +2053,11 @@
                 <section>
                     <h2>ĐỐI TÁC TIÊU BIỂU / KEY PARTNERS</h2>
                     <div class="partners-grid">
-                        <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://rubee.com.vn/admin/webroot/upload/image//images/tin-tuc/vietnam-airlines-logo-2.png"/></div>
-                        <div class="partner-logo"><img alt="Logo EVN" src="https://www.evn.com.vn//userfile/User/tcdl/images/2023/4/14042023_LogoEVN_Ngang_FULL.jpg"/></div>
-                        <div class="partner-logo"><img alt="Logo Jollibee" src="https://brandlogos.net/wp-content/uploads/2025/05/jollibee_horizontal-logo_brandlogos.net_lrab6.png"/></div>
-                        <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://i0.wp.com/www.globalsafe.vn/noidung/uploads/2017/10/thiet-ke-logo-baoviet.png?fit=438%2C388&ssl=1"/></div>
-                        <div class="partner-logo"><img alt="HCDC" src="https://hcdc.vn/public/img/images/news/2019/11/news-1569819039115.png"/></div>
+                        <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://upload.wikimedia.org/wikipedia/vi/thumb/b/b5/Vietnam_Airlines_Logo.svg/2560px-Vietnam_Airlines_Logo.svg.png"/></div>
+                        <div class="partner-logo"><img alt="Logo EVN" src="https://upload.wikimedia.org/wikipedia/vi/thumb/6/69/EVN_Logo.svg/1200px-EVN_Logo.svg.png"/></div>
+                        <div class="partner-logo"><img alt="Logo Jollibee" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Jollibee_logo.svg/1200px-Jollibee_logo.svg.png"/></div>
+                        <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://upload.wikimedia.org/wikipedia/vi/thumb/2/28/Bao_Viet_Logo.svg/1200px-Bao_Viet_Logo.svg.png"/></div>
+                        <div class="partner-logo"><img alt="HCDC" src="https://hochiminhcity.gov.vn/documents/20182/4377396/logo_hcdc.png"/></div>
                     </div>
 
                     <h2>QUY TRÌNH LÀM VIỆC / OUR WORKFLOW</h2>
