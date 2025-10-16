@@ -29,7 +29,7 @@
             color: var(--secondary-text);
             margin: 0;
             padding: 15px 0;
-            line-height: 1.35; /* Giảm khoảng cách dòng */
+            line-height: 1.35;
             font-size: 11pt;
             transition: all 0.3s ease;
         }
@@ -168,7 +168,7 @@
             align-items: center; 
             gap: 20px; 
             padding-bottom: 20px; 
-            margin-bottom: 20px; /* Giảm khoảng cách */
+            margin-bottom: 20px;
         }
         
         .profile-header::after { 
@@ -227,7 +227,7 @@
         section { 
             padding-top: 15px; 
             margin-top: 20px; 
-        } /* Giảm khoảng cách */
+        }
         
         main > section:first-child { 
             padding-top: 0; 
@@ -237,7 +237,7 @@
         .grid-2, .grid-3, .grid-4 { 
             display: grid; 
             gap: 20px; 
-        } /* Giảm khoảng cách */
+        }
         
         .grid-2 { 
             grid-template-columns: repeat(2, 1fr); 
@@ -254,7 +254,7 @@
         .card, .kpi-card {
             background-color: var(--background-light); 
             padding: 15px; 
-            border-radius: 8px; /* Giảm padding */
+            border-radius: 8px;
             border: 1px solid var(--google-green);
             transition: all 0.3s ease;
         }
@@ -486,11 +486,14 @@
             font-style: italic;
         }
 
-        /* Slide View Styles */
+        /* Slide View Styles - Updated for better display */
         body.slide-view {
             background-color: #000;
             padding: 0;
+            margin: 0;
             overflow: hidden;
+            width: 100vw;
+            height: 100vh;
         }
 
         body.slide-view .view-controls {
@@ -511,6 +514,8 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            margin: 0;
+            padding: 0;
         }
 
         body.slide-view .slide-wrapper {
@@ -542,15 +547,13 @@
         }
 
         body.slide-view .slide-content {
-            width: 90%;
-            max-width: 90vw;
-            height: 90vh;
-            max-height: calc(90vw * 9/16);
+            width: 100%;
+            height: 100%;
             background-color: white;
-            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             position: relative;
+            margin: 0;
+            padding: 0;
         }
 
         body.slide-view .a4-container {
@@ -559,6 +562,87 @@
             margin: 0;
             box-shadow: none;
             min-height: auto;
+            padding: 25px;
+            box-sizing: border-box;
+            transform: scale(1.2);
+            transform-origin: center center;
+        }
+
+        /* Increased font sizes for slide view */
+        body.slide-view h1 {
+            font-size: 23pt !important;
+        }
+        
+        body.slide-view h2 {
+            font-size: 22pt !important;
+        }
+        
+        body.slide-view h3 {
+            font-size: 18pt !important;
+        }
+        
+        body.slide-view h4 {
+            font-size: 17pt !important;
+        }
+        
+        body.slide-view p {
+            font-size: 17pt !important;
+        }
+        
+        body.slide-view .english-text {
+            font-size: 16pt !important;
+        }
+        
+        body.slide-view .kpi-card .number {
+            font-size: 30pt !important;
+        }
+        
+        body.slide-view .kpi-card .label {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .contact-info-list {
+            font-size: 16pt !important;
+        }
+        
+        body.slide-view .profile-footer {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .tool-logo p {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .expert-card h4 {
+            font-size: 17pt !important;
+        }
+        
+        body.slide-view .expert-card p {
+            font-size: 15pt !important;
+        }
+        
+        body.slide-view .flow-solution h3 {
+            font-size: 20pt !important;
+        }
+        
+        body.slide-view .flow-solution p {
+            font-size: 17pt !important;
+        }
+        
+        body.slide-view .flow-step h4 {
+            font-size: 17pt !important;
+        }
+        
+        body.slide-view .flow-step p {
+            font-size: 16pt !important;
+        }
+        
+        body.slide-view .flow-use-case h4 {
+            font-size: 17pt !important;
+        }
+        
+        body.slide-view .flow-use-case p {
+            font-size: 16pt !important;
         }
 
         body.slide-view .slide-nav {
@@ -645,7 +729,40 @@
             background-color: rgba(255, 255, 255, 0.4);
         }
 
-        /* Landing Page View Styles */
+        /* Fullscreen styles */
+        body.slide-view:fullscreen {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.slide-view:-webkit-full-screen {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.slide-view:-moz-full-screen {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.slide-view:-ms-fullscreen {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Landing Page View Styles - Updated */
         body.landing-view {
             background-color: var(--background-page);
             padding: 0;
@@ -682,7 +799,14 @@
             padding: 15px 0;
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 20px;
+        }
+
+        body.landing-view .landing-nav-logo {
+            position: absolute;
+            left: 20px;
+            height: 30px;
         }
 
         body.landing-view .landing-nav-item {
@@ -719,6 +843,10 @@
         body.landing-view .a4-container:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        body.landing-view .profile-header {
+            display: none;
         }
 
         body.landing-view .profile-footer {
@@ -966,10 +1094,10 @@
                                 <div class="about-grid">
                                     <div class="about-text">
                                         <p>
-                                            Thành lập từ năm 2021, <strong>EMS Solution</strong> là chuyên gia về các giải pháp trên hệ sinh thái Google, giúp người dùng cá nhân và doanh nghiệp bứt phá công việc, tăng năng suất. Chúng tôi cung cấp dịch vụ toàn diện từ tư vấn, đào tạo đến phát triển ứng dụng dựa trên các nền tảng miễn phí hoặc trả phí như <strong>Google Workspace</strong> và <strong>Google Cloud</strong>.
+                                            Thành lập từ năm 2021, <strong>EMS Solution</strong> là chuyên gia về các giải pháp trên hệ sinh thái Google, giúp người dùng cá nhân và doanh nghiệp bứt phá công việc, tăng năng suất.
                                         </p>
                                         <p class="english-text">
-                                            Established in 2021, <strong>EMS Solution</strong> is an expert in Google ecosystem solutions, helping individuals and businesses break through work barriers and boost productivity. We provide comprehensive services from consulting and training to application development based on free or paid platforms like <strong>Google Workspace</strong> and <strong>Google Cloud</strong>.
+                                            Established in 2021, <strong>EMS Solution</strong> is an expert in Google ecosystem solutions, helping individuals and businesses break through work barriers and boost productivity.
                                         </p>
                                     </div>
                                     <div class="about-image">
@@ -979,21 +1107,42 @@
                                 <div class="grid-2" style="margin-top: 25px;">
                                     <div class="card">
                                         <h3><i class="fas fa-bullseye icon"></i> Sứ Mệnh / Mission</h3>
-                                        <p>Giúp mọi người dùng, từ cá nhân đến doanh nghiệp, khai phá và tận dụng tối đa sức mạnh của hệ sinh thái Google để giải quyết các bài toán vận hành, tự động hóa công việc và tối ưu hiệu suất. <span class="english-text">/ To help all users, from individuals to enterprises, unlock and leverage the full power of the Google ecosystem to solve operational challenges, automate tasks, and optimize performance.</span></p>
+                                        <p>Giúp mọi người dùng, từ cá nhân đến doanh nghiệp, khai phá và tận dụng tối đa sức mạnh của hệ sinh thái Google để giải quyết các bài toán vận hành, tự động hóa công việc và tối ưu hiệu suất.</p>
                                     </div>
                                     <div class="card">
                                         <h3><i class="fas fa-eye icon"></i> Tầm Nhìn / Vision</h3>
-                                        <p>Trở thành cầu nối hàng đầu, mang những công nghệ tiên tiến nhất của Google đến gần hơn với người dùng Việt Nam, thúc đẩy một môi trường làm việc thông minh, linh hoạt và hiệu quả. <span class="english-text">/ To become a leading bridge, bringing Google's most advanced technologies closer to Vietnamese users, fostering a smart, flexible, and efficient working environment.</span></p>
+                                        <p>Trở thành cầu nối hàng đầu, mang những công nghệ tiên tiến nhất của Google đến gần hơn với người dùng Việt Nam, thúc đẩy một môi trường làm việc thông minh, linh hoạt và hiệu quả.</p>
                                     </div>
                                 </div>
                             </section>
+                        </main>
+                        <footer class="profile-footer">
+                            <span>Version 01-2025 | © EMS Solution</span>
+                            <span class="page-number">Trang 1 / 7</span>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="a4-container">
+                        <header class="profile-header">
+                            <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
+                            <div class="company-title">
+                                <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
+                                <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
+                            </div>
+                        </header>
+                        <main class="page-content">
                             <section>
                                 <h2>GIÁ TRỊ CỐT LÕI / CORE VALUES</h2>
                                 <p>
-                                    Tại EMS Solution, chúng tôi không chỉ là một công ty công nghệ hay đào tạo. Sứ mệnh của chúng tôi gắn liền với cộng đồng "Số hóa quy trình" - những người đang làm việc với các ứng dụng Google hàng ngày. Chúng tôi nỗ lực để giúp mỗi cá nhân và doanh nghiệp gia tăng giá trị, bứt phá năng suất và tiết kiệm chi phí vận hành. Những con số dưới đây là minh chứng cho sự tin tưởng của cộng đồng và cam kết của chúng tôi trong việc mang lại giá trị thực tiễn cho từng khách hàng và học viên.
+                                    Tại EMS Solution, chúng tôi không chỉ là một công ty công nghệ hay đào tạo. Sứ mệnh của chúng tôi gắn liền với cộng đồng "Số hóa quy trình" - những người đang làm việc với các ứng dụng Google hàng ngày.
                                 </p>
                                 <p class="english-text">
-                                    At EMS Solution, we are more than just a technology or training company. Our mission is deeply connected to the "Process Digitization" community—those who work with Google applications daily. We strive to help every individual and business increase value, break through productivity barriers, and save operational costs. The figures below are a testament to the community's trust and our commitment to delivering practical value to every client and student.
+                                    At EMS Solution, we are more than just a technology or training company. Our mission is deeply connected to the "Process Digitization" community—those who work with Google applications daily.
                                 </p>
                                 <div class="kpi-grid">
                                     <div class="kpi-card">
@@ -1021,49 +1170,7 @@
                         </main>
                         <footer class="profile-footer">
                             <span>Version 01-2025 | © EMS Solution</span>
-                            <span class="page-number">Trang 1 / 5</span>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="slide">
-                <div class="slide-content">
-                    <div class="a4-container">
-                        <header class="profile-header">
-                            <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
-                            <div class="company-title">
-                                <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
-                                <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
-                            </div>
-                        </header>
-                        <main class="page-content">
-                            <section>
-                                <h2>LĨNH VỰC GIẢI PHÁP / OUR SOLUTIONS</h2>
-                                <div class="grid-2">
-                                    <div class="card">
-                                        <h3><i class="fas fa-cogs icon"></i> Tối ưu Vận hành với Google Workspace / Optimizing Operations with Google Workspace</h3>
-                                        <p>Tư vấn và triển khai trọn gói Google Workspace, giúp doanh nghiệp tối ưu hóa quy trình làm việc, bảo mật và hiệu quả trên nền tảng đám mây. <span class="english-text">/ We consult and provide end-to-end implementation of Google Workspace, helping businesses optimize collaboration, security, and efficiency on the cloud.</span></p>
-                                    </div>
-                                    <div class="card">
-                                        <h3><i class="fas fa-mobile-alt icon"></i> Xây dựng Ứng dụng tùy chỉnh trên nền tảng Google / Building Custom Applications on the Google Platform</h3>
-                                        <p>Sử dụng AppSheet và Apps Script để phát triển các ứng dụng quản lý (Mini-ERP, HRM, CRM) mà không cần lập trình, tích hợp sâu vào Google Workspace. <span class="english-text">/ Using AppSheet and Apps Script, we develop custom management applications (Mini-ERP, HRM, CRM) without coding, deeply integrated with Google Sheets and Drive.</span></p>
-                                    </div>
-                                    <div class="card">
-                                        <h3><i class="fas fa-robot icon"></i> Tự động hóa Thông minh với Google AI / Intelligent Automation with Google AI</h3>
-                                        <p>Khai thác sức mạnh của AI Agent (Gemini) để tự động hóa các tác vụ lặp lại, từ chăm sóc khách hàng, phân tích dữ liệu đến tạo báo cáo tự động. <span class="english-text">/ We leverage the power of AI Agents (Gemini) to automate repetitive tasks, from customer care and data analysis to automated report generation.</span></p>
-                                    </div>
-                                    <div class="card">
-                                        <h3><i class="fas fa-chalkboard-teacher icon"></i> Đào tạo & Nâng cao Kỹ năng Google / Google Skills Training & Enhancement</h3>
-                                        <p>Các khóa học thực chiến về Google Sheets, AppSheet, Looker Studio... giúp người dùng cá nhân và đội ngũ nhân sự làm chủ công cụ, tăng năng suất. <span class="english-text">/ We offer hands-on training courses on Google Sheets, AppSheet, Looker Studio, empowering individuals and teams to master the tools and boost productivity.</span></p>
-                                    </div>
-                                </div>
-                            </section>
-                        </main>
-                        <footer class="profile-footer">
-                            <span>Version 01-2025 | © EMS Solution</span>
-                            <span class="page-number">Trang 2 / 5</span>
+                            <span class="page-number">Trang 2 / 7</span>
                         </footer>
                     </div>
                 </div>
@@ -1082,41 +1189,30 @@
                         </header>
                         <main class="page-content">
                             <section>
-                                <h2>CÔNG CỤ & NỀN TẢNG / TOOLS & PLATFORMS</h2>
-                                <div class="tech-stack-grid">
-                                    <div class="tool-logo"><img src="https://www.google.com/images/icons/product/workspaces-16.svg" alt="Google Workspace"><p>Google Workspace</p></div>
-                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/dashboard_black_48dp.png" alt="AppSheet"><p>AppSheet</p></div>
-                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/bar_chart_black_48dp.png" alt="Looker Studio"><p>Looker Studio</p></div>
-                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/code_black_48dp.png" alt="Apps Script"><p>Apps Script</p></div>
-                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/smart_toy_black_48dp.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
-                                    <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/cloud_black_48dp.png" alt="Google Cloud"><p>Google Cloud</p></div>
-                                </div>
-                            </section>
-                            <section>
-                                <h2>QUYỀN LỢI KHÁCH HÀNG / CLIENT BENEFITS</h2>
+                                <h2>LĨNH VỰC GIẢI PHÁP / OUR SOLUTIONS</h2>
                                 <div class="grid-2">
                                     <div class="card">
-                                        <h3><i class="fas fa-ruler-combined icon"></i> Ứng dụng tùy biến sâu/ Custom Solutions</h3>
-                                        <p>Mỗi giải pháp đều được phân tích và thiết kế dựa trên quy trình và đặc thù riêng của doanh nghiệp, không áp dụng rập khuôn. <span class="english-text">/ Each solution is analyzed and designed based on the specific processes and characteristics of the business, not a one-size-fits-all approach.</span></p>
+                                        <h3><i class="fas fa-cogs icon"></i> Tối ưu Vận hành với Google Workspace</h3>
+                                        <p>Tư vấn và triển khai trọn gói Google Workspace, giúp doanh nghiệp tối ưu hóa quy trình làm việc, bảo mật và hiệu quả trên nền tảng đám mây.</p>
                                     </div>
                                     <div class="card">
-                                        <h3><i class="fas fa-rocket icon"></i> Triển Khai Nhanh Chóng / Rapid Deployment</h3>
-                                        <p>Với lợi thế của nền tảng No-code/Low-code, chúng tôi cam kết thời gian triển khai nhanh chóng, giúp doanh nghiệp sớm đưa vào vận hành. <span class="english-text">/ With the advantage of No-code/Low-code platforms, we commit to rapid deployment times, helping businesses go live sooner.</span></p>
+                                        <h3><i class="fas fa-mobile-alt icon"></i> Xây dựng Ứng dụng tùy chỉnh</h3>
+                                        <p>Sử dụng AppSheet và Apps Script để phát triển các ứng dụng quản lý (Mini-ERP, HRM, CRM) mà không cần lập trình.</p>
                                     </div>
                                     <div class="card">
-                                        <h3><i class="fas fa-hand-holding-usd icon"></i> Tối Ưu Chi Phí / Cost-Effective</h3>
-                                        <p>Cung cấp giải pháp với chi phí hợp lý, phù hợp với ngân sách của các doanh nghiệp vừa và nhỏ so với các hệ thống ERP truyền thống. <span class="english-text">/ We provide solutions at a reasonable cost, suitable for the budgets of small and medium-sized enterprises compared to traditional ERP systems.</span></p>
+                                        <h3><i class="fas fa-robot icon"></i> Tự động hóa Thông minh với Google AI</h3>
+                                        <p>Khai thác sức mạnh của AI Agent (Gemini) để tự động hóa các tác vụ lặp lại, từ chăm sóc khách hàng đến tạo báo cáo tự động.</p>
                                     </div>
                                     <div class="card">
-                                        <h3><i class="fas fa-headset icon"></i> Hỗ Trợ 24/7 / Dedicated Support</h3>
-                                        <p>Đội ngũ kỹ thuật luôn sẵn sàng hỗ trợ 24/7, đồng hành cùng doanh nghiệp trong suốt quá trình sử dụng, đảm bảo hệ thống hoạt động ổn định. <span class="english-text">/ Our technical team is always ready to support and accompany businesses throughout the usage process, ensuring stable system operation.</span></p>
+                                        <h3><i class="fas fa-chalkboard-teacher icon"></i> Đào tạo & Nâng cao Kỹ năng</h3>
+                                        <p>Các khóa học thực chiến về Google Sheets, AppSheet, Looker Studio... giúp người dùng làm chủ công cụ, tăng năng suất.</p>
                                     </div>
                                 </div>
                             </section>
                         </main>
                         <footer class="profile-footer">
                             <span>Version 01-2025 | © EMS Solution</span>
-                            <span class="page-number">Trang 3 / 5</span>
+                            <span class="page-number">Trang 3 / 7</span>
                         </footer>
                     </div>
                 </div>
@@ -1135,51 +1231,42 @@
                         </header>
                         <main class="page-content">
                             <section>
-                                <h2>ĐỐI TÁC TIÊU BIỂU / KEY PARTNERS</h2>
-                                <div class="partners-grid">
-                                    <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://upload.wikimedia.org/wikipedia/vi/thumb/b/b5/Vietnam_Airlines_Logo.svg/2560px-Vietnam_Airlines_Logo.svg.png"/></div>
-                                    <div class="partner-logo"><img alt="Logo EVN" src="https://upload.wikimedia.org/wikipedia/vi/thumb/6/69/EVN_Logo.svg/1200px-EVN_Logo.svg.png"/></div>
-                                    <div class="partner-logo"><img alt="Logo Jollibee" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Jollibee_logo.svg/1200px-Jollibee_logo.svg.png"/></div>
-                                    <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://upload.wikimedia.org/wikipedia/vi/thumb/2/28/Bao_Viet_Logo.svg/1200px-Bao_Viet_Logo.svg.png"/></div>
-                                    <div class="partner-logo"><img alt="HCDC" src="https://hochiminhcity.gov.vn/documents/20182/4377396/logo_hcdc.png"/></div>
-                                </div>
-
-                                <h2>QUY TRÌNH LÀM VIỆC / OUR WORKFLOW</h2>
-                                <div class="grid-2">
-                                    <div class="card">
-                                        <div class="process-heading">
-                                            <i class="fas fa-comments icon-step step-1"></i>
-                                            <h4>1. Tư Vấn & Khảo Sát / Consultation</h4>
+                                <h2>Flow tự động số hóa quy trình</h2>
+                                <div class="flow-solution">
+                                    <h3><i class="fas fa-project-diagram flow-icon"></i> Hệ sinh thái tích hợp hoàn chỉnh</h3>
+                                    <p>
+                                        Giải pháp <strong>Flow</strong> kết nối sức mạnh của <strong>Google AppSheet</strong>, <strong>Google Workspace</strong>, <strong>AI Agent</strong> và <strong>Zalo OA</strong> để tự động hóa toàn diện quy trình vận hành và bán hàng.
+                                    </p>
+                                    
+                                    <div class="flow-diagram">
+                                        <div class="flow-arrow"></div>
+                                        <div class="flow-step">
+                                            <h4>Thu thập dữ liệu</h4>
+                                            <p>Google Forms<br>AppSheet</p>
                                         </div>
-                                        <p>Lắng nghe, phân tích nhu cầu và các vấn đề doanh nghiệp đang gặp phải để hiểu rõ bài toán. <span class="english-text">/ Listen to and analyze the client's needs and challenges to fully understand the problem.</span></p>
-                                    </div>
-                                    <div class="card">
-                                        <div class="process-heading">
-                                            <i class="fas fa-pencil-ruler icon-step step-2"></i>
-                                            <h4>2. Thiết Kế & Báo Giá / Design & Proposal</h4>
+                                        <div class="flow-step">
+                                            <h4>Xử lý & Phân tích</h4>
+                                            <p>Google Sheets<br>AI Agent</p>
                                         </div>
-                                        <p>Đề xuất giải pháp tổng thể, thiết kế giao diện, tính năng và báo giá với chi phí tối ưu nhất. <span class="english-text">/ Propose a comprehensive solution, design the interface and features, and provide a quote with the most optimized cost.</span></p>
-                                    </div>
-                                    <div class="card">
-                                        <div class="process-heading">
-                                            <i class="fas fa-cogs icon-step step-3"></i>
-                                            <h4>3. Phát Triển & Triển Khai / Development</h4>
+                                        <div class="flow-step">
+                                            <h4>Phê duyệt & Điều phối</h4>
+                                            <p>Google Workspace<br>Apps Script</p>
                                         </div>
-                                        <p>Xây dựng, kiểm thử và bàn giao sản phẩm theo đúng cam kết về tiến độ và chất lượng. <span class="english-text">/ Build, test, and deliver the product in accordance with commitments on schedule and quality.</span></p>
-                                    </div>
-                                    <div class="card">
-                                        <div class="process-heading">
-                                            <i class="fas fa-life-ring icon-step step-4"></i>
-                                            <h4>4. Hỗ Trợ & Bảo Trì / Support & Maintenance</h4>
+                                        <div class="flow-step">
+                                            <h4>Thông báo & Tương tác</h4>
+                                            <p>Zalo OA<br>Gmail</p>
                                         </div>
-                                        <p>Đồng hành, bảo hành và hỗ trợ kỹ thuật trong suốt quá trình vận hành để đảm bảo hệ thống hoạt động ổn định. <span class="english-text">/ Provide ongoing companionship, warranty, and technical support throughout the operational process to ensure stable system performance.</span></p>
+                                        <div class="flow-step">
+                                            <h4>Báo cáo & Tối ưu</h4>
+                                            <p>Looker Studio<br>AI Analytics</p>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
                         </main>
                         <footer class="profile-footer">
                             <span>Version 01-2025 | © EMS Solution</span>
-                            <span class="page-number">Trang 4 / 5</span>
+                            <span class="page-number">Trang 4 / 7</span>
                         </footer>
                     </div>
                 </div>
@@ -1198,8 +1285,91 @@
                         </header>
                         <main class="page-content">
                             <section>
-                                <h2>ĐỘI NGŨ CHUYÊN GIA / OUR EXPERTS</h2>
-                                <p>Thành công của chúng tôi được xây dựng dựa trên nền tảng con người. Đội ngũ EMS là những chuyên gia có nhiều năm kinh nghiệm thực chiến tại các doanh nghiệp lớn và có niềm đam mê chia sẻ kiến thức. <span class="english-text">/ Our success is built on a foundation of people. The EMS team consists of experts with years of hands-on experience at large enterprises and a passion for sharing knowledge.</span></p>
+                                <h2>Ứng dụng thực tế</h2>
+                                <div class="flow-use-cases">
+                                    <div class="flow-use-case">
+                                        <h4><i class="fas fa-industry"></i> Trong Sản xuất</h4>
+                                        <p>
+                                            <strong>Quản lý chuỗi cung ứng:</strong> Theo dõi nguyên vật liệu, tự động đặt hàng khi tồn kho thấp.<br>
+                                            <strong>Kiểm soát chất lượng:</strong> Ghi nhận lỗi sản xuất, phân tích nguyên nhân.<br>
+                                            <strong>Bảo trì thiết bị:</strong> Lên lịch bảo trì, theo dõi lịch sử và cảnh báo.
+                                        </p>
+                                    </div>
+                                    <div class="flow-use-case">
+                                        <h4><i class="fas fa-shopping-cart"></i> Trong Bán hàng</h4>
+                                        <p>
+                                            <strong>Quản lý đơn hàng:</strong> Tự động xác nhận đơn, cập nhật tồn kho.<br>
+                                            <strong>Chăm sóc khách hàng:</strong> Phân loại yêu cầu, tự động phản hồi qua Zalo OA.<br>
+                                            <strong>Báo cáo doanh số:</strong> Tổng hợp dữ liệu, phân tích hiệu quả và dự báo.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        </main>
+                        <footer class="profile-footer">
+                            <span>Version 01-2025 | © EMS Solution</span>
+                            <span class="page-number">Trang 5 / 7</span>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="a4-container">
+                        <header class="profile-header">
+                            <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
+                            <div class="company-title">
+                                <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
+                                <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
+                            </div>
+                        </header>
+                        <main class="page-content">
+                            <section>
+                                <h2>CÔNG CỤ & NỀN TẢNG</h2>
+                                <div class="tech-stack-grid">
+                                    <div class="tool-logo"><img src="https://nforceit.com.au/wp-content/uploads/2023/10/nforceit-partner-google-workspace-logo-800x400.png" alt="Google Workspace"><p>Google Workspace</p></div>
+                                    <div class="tool-logo"><img src="https://cdn-1.webcatalog.io/catalog/appsheet/appsheet-icon-filled-256.png" alt="AppSheet"><p>AppSheet</p></div>
+                                    <div class="tool-logo"><img src="https://images.seeklogo.com/logo-png/61/2/looker-studio-logo-png_seeklogo-617989.png" alt="Looker Studio"><p>Looker Studio</p></div>
+                                    <div class="tool-logo"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" alt="Apps Script"><p>Apps Script</p></div>
+                                    <div class="tool-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
+                                    <div class="tool-logo"><img src="https://images.icon-icons.com/2699/PNG/512/google_cloud_logo_icon_170066.png" alt="Google Cloud"><p>Google Cloud</p></div>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>ĐỐI TÁC TIÊU BIỂU</h2>
+                                <div class="partners-grid">
+                                    <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://rubee.com.vn/admin/webroot/upload/image//images/tin-tuc/vietnam-airlines-logo-2.png"/></div>
+                                    <div class="partner-logo"><img alt="Logo EVN" src="https://www.evn.com.vn//userfile/User/tcdl/images/2023/4/14042023_LogoEVN_Ngang_FULL.jpg"/></div>
+                                    <div class="partner-logo"><img alt="Logo Jollibee" src="https://brandlogos.net/wp-content/uploads/2025/05/jollibee_horizontal-logo_brandlogos.net_lrab6.png"/></div>
+                                    <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://i0.wp.com/www.globalsafe.vn/noidung/uploads/2017/10/thiet-ke-logo-baoviet.png?fit=438%2C388&ssl=1"/></div>
+                                    <div class="partner-logo"><img alt="HCDC" src="https://hcdc.vn/public/img/images/news/2019/11/news-1569819039115.png"/></div>
+                                </div>
+                            </section>
+                        </main>
+                        <footer class="profile-footer">
+                            <span>Version 01-2025 | © EMS Solution</span>
+                            <span class="page-number">Trang 6 / 7</span>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="a4-container">
+                        <header class="profile-header">
+                            <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
+                            <div class="company-title">
+                                <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
+                                <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
+                            </div>
+                        </header>
+                        <main class="page-content">
+                            <section>
+                                <h2>ĐỘI NGŨ CHUYÊN GIA</h2>
                                 <div class="grid-4">
                                     <div class="expert-card">
                                         <img src="https://gpems.net/_next/image?url=https%3A%2F%2Fadmin.gpems.net%2Fstorage%2Fuploads%2Fcourses%2Flecturers%2FdwDwZCThmWPgEM0kDi8XnYWkuLke9k-metaNzI0MjU1MTcwMTY2NzAzMTA4MC5wbmc%3D-.png&w=3840&q=75" alt="Nguyễn Tấn Hiền">
@@ -1224,27 +1394,26 @@
                                 </div>
                             </section>
                             <section>
-                                <h2>LIÊN HỆ / CONTACT</h2>
-                                <p>Chúng tôi luôn sẵn sàng lắng nghe và tư vấn giải pháp phù hợp nhất cho doanh nghiệp của bạn. Hãy kết nối với EMS Solution ngay hôm nay! <span class="english-text">/ We are always ready to listen and advise on the most suitable solution for your business. Connect with EMS Solution today!</span></p>
+                                <h2>LIÊN HỆ</h2>
                                 <div class="contact-container">
                                     <ul class="contact-info-list">
-                                        <li><div class="icon"><i class="fas fa-building"></i></div> <div><strong>Công ty TNHH Giải pháp số EMS</strong><br><span class="english-text" style="font-size: 9pt;">EMS Digital Solutions Co., Ltd</span></div></li>
-                                        <li><div class="icon"><i class="fas fa-map-marker-alt"></i></div> <div><strong>Địa chỉ / Address:</strong> 93/4 Lien Khu 5-6, Binh Tan, HCMC</div></li>
-                                        <li><div class="icon"><i class="fas fa-barcode"></i></div> <div><strong>Mã số thuế / Tax Code:</strong> 0316870151</div></li>
-                                        <li><div class="icon"><i class="fas fa-phone-alt"></i></div> <div><strong>Hotline/Zalo:</strong> <a href="tel:0903375265">0903.375.265 (Mr. Hiền)</a> | <a href="tel:0963322110">0963.322.110 (Mr. Hòa)</a></div></li>
-                                        <li><div class="icon"><i class="fas fa-envelope"></i></div> <div><strong>Email:</strong> <a href="mailto:admin@gpems.net">admin@gpems.net</a> | <a href="mailto:admin@giaiphapsoems.vn">admin@giaiphapsoems.vn</a></div></li>
+                                        <li><div class="icon"><i class="fas fa-building"></i></div> <div><strong>Công ty TNHH Giải pháp số EMS</strong></div></li>
+                                        <li><div class="icon"><i class="fas fa-map-marker-alt"></i></div> <div><strong>Địa chỉ:</strong> 93/4 Lien Khu 5-6, Binh Tan, HCMC</div></li>
+                                        <li><div class="icon"><i class="fas fa-barcode"></i></div> <div><strong>Mã số thuế:</strong> 0316870151</div></li>
+                                        <li><div class="icon"><i class="fas fa-phone-alt"></i></div> <div><strong>Hotline/Zalo:</strong> <a href="tel:0903375265">0903.375.265 (Mr. Hiền)</a></div></li>
+                                        <li><div class="icon"><i class="fas fa-envelope"></i></div> <div><strong>Email:</strong> <a href="mailto:admin@gpems.net">admin@gpems.net</a></div></li>
                                         <li><div class="icon"><i class="fas fa-globe"></i></div> <div><strong>Website:</strong> <a href="https://giaiphapsoems.vn" target="_blank">giaiphapsoems.vn</a></div></li>
                                     </ul>
                                     <div class="qr-code-container">
                                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://giaiphapsoems.vn" alt="QR Code to website">
-                                        <p>Quét để truy cập website<br><span class="english-text" style="font-size: 8pt;">Scan to visit our website</span></p>
+                                        <p>Quét để truy cập website</p>
                                     </div>
                                 </div>
                             </section>
                         </main>
                         <footer class="profile-footer">
                             <span>Version 01-2025 | © EMS Solution</span>
-                            <span class="page-number">Trang 5 / 5</span>
+                            <span class="page-number">Trang 7 / 7</span>
                         </footer>
                     </div>
                 </div>
@@ -1258,6 +1427,8 @@
             <div class="slide-dot" onclick="goToSlide(2)"></div>
             <div class="slide-dot" onclick="goToSlide(3)"></div>
             <div class="slide-dot" onclick="goToSlide(4)"></div>
+            <div class="slide-dot" onclick="goToSlide(5)"></div>
+            <div class="slide-dot" onclick="goToSlide(6)"></div>
         </div>
 
         <!-- Slide Controls -->
@@ -1268,7 +1439,7 @@
 
         <!-- Slide Info -->
         <div class="slide-info">
-            <span id="slideInfo">1 / 5</span>
+            <span id="slideInfo">1 / 7</span>
         </div>
 
         <!-- Fullscreen Button -->
@@ -1293,8 +1464,10 @@
 
         <!-- Landing Navigation -->
         <div class="landing-nav">
+            <img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo" class="landing-nav-logo">
             <button class="landing-nav-item active" onclick="scrollToSection('about')">Về chúng tôi</button>
             <button class="landing-nav-item" onclick="scrollToSection('solutions')">Giải pháp</button>
+            <button class="landing-nav-item" onclick="scrollToSection('flow')">Flow Solution</button>
             <button class="landing-nav-item" onclick="scrollToSection('tools')">Công cụ</button>
             <button class="landing-nav-item" onclick="scrollToSection('partners')">Đối tác</button>
             <button class="landing-nav-item" onclick="scrollToSection('team')">Đội ngũ</button>
@@ -1303,13 +1476,6 @@
 
         <!-- PAGE 1: INTRODUCTION -->
         <div class="a4-container" id="about">
-            <header class="profile-header">
-                <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
-                <div class="company-title">
-                    <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
-                    <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
-                </div>
-            </header>
             <main class="page-content">
                 <section>
                     <h2>VỀ CHÚNG TÔI / ABOUT US</h2>
@@ -1375,15 +1541,8 @@
             </footer>
         </div>
         
-        <!-- PAGE 2: CORE VALUES & PARTNERS -->
+        <!-- PAGE 2: SOLUTIONS -->
         <div class="a4-container" id="solutions">
-            <header class="profile-header">
-                <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
-                <div class="company-title">
-                    <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
-                    <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
-                </div>
-            </header>
             <main class="page-content">
                 <section>
                     <h2>LĨNH VỰC GIẢI PHÁP / OUR SOLUTIONS</h2>
@@ -1405,10 +1564,21 @@
                             <p>Các khóa học thực chiến về Google Sheets, AppSheet, Looker Studio... giúp người dùng cá nhân và đội ngũ nhân sự làm chủ công cụ, tăng năng suất. <span class="english-text">/ We offer hands-on training courses on Google Sheets, AppSheet, Looker Studio, empowering individuals and teams to master the tools and boost productivity.</span></p>
                         </div>
                     </div>
-                    
-                    <!-- New Flow Solution Section -->
+                </section>
+            </main>
+            <footer class="profile-footer">
+                <span>Version 01-2025 | © EMS Solution</span>
+                <span class="page-number">Trang 2 / 5</span>
+            </footer>
+        </div>
+
+        <!-- PAGE 3: FLOW SOLUTION -->
+        <div class="a4-container" id="flow">
+            <main class="page-content">
+                <section>
+                    <h2>Flow tự động số hóa quy trình / Automated Process Digitization Flow</h2>
                     <div class="flow-solution">
-                        <h3><i class="fas fa-project-diagram flow-icon"></i> Flow tự động số hóa quy trình / Automated Process Digitization Flow</h3>
+                        <h3><i class="fas fa-project-diagram flow-icon"></i> Hệ sinh thái tích hợp hoàn chỉnh</h3>
                         <p>
                             Giải pháp <strong>Flow</strong> của EMS Solution là một hệ sinh thái tích hợp hoàn chỉnh, kết nối sức mạnh của <strong>Google AppSheet</strong>, <strong>Google Workspace</strong>, <strong>AI Agent</strong> và <strong>Zalo OA</strong> để tự động hóa toàn diện quy trình vận hành và bán hàng. Flow giúp doanh nghiệp chuyển đổi từ quy trình thủ công sang hệ thống số hóa thông minh, giảm thiểu sai sót và tăng hiệu suất.
                         </p>
@@ -1463,109 +1633,47 @@
             </main>
             <footer class="profile-footer">
                 <span>Version 01-2025 | © EMS Solution</span>
-                <span class="page-number">Trang 2 / 5</span>
-            </footer>
-        </div>
-
-        <!-- PAGE 3: SOLUTIONS -->
-        <div class="a4-container" id="tools">
-            <header class="profile-header">
-                <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
-                <div class="company-title">
-                    <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
-                    <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
-                </div>
-            </header>
-            <main class="page-content">
-                <section>
-                    <h2>CÔNG CỤ & NỀN TẢNG / TOOLS & PLATFORMS</h2>
-                    <div class="tech-stack-grid">
-                        <div class="tool-logo"><img src="https://www.google.com/images/icons/product/workspaces-16.svg" alt="Google Workspace"><p>Google Workspace</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/dashboard_black_48dp.png" alt="AppSheet"><p>AppSheet</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/bar_chart_black_48dp.png" alt="Looker Studio"><p>Looker Studio</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/code_black_48dp.png" alt="Apps Script"><p>Apps Script</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/smart_toy_black_48dp.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/cloud_black_48dp.png" alt="Google Cloud"><p>Google Cloud</p></div>
-                    </div>
-                </section>
-                <section>
-                    <h2>QUYỀN LỢI KHÁCH HÀNG / CLIENT BENEFITS</h2>
-                    <div class="grid-2">
-                        <div class="card">
-                            <h3><i class="fas fa-ruler-combined icon"></i> Ứng dụng tùy biến sâu/ Custom Solutions</h3>
-                            <p>Mỗi giải pháp đều được phân tích và thiết kế dựa trên quy trình và đặc thù riêng của doanh nghiệp, không áp dụng rập khuôn. <span class="english-text">/ Each solution is analyzed and designed based on the specific processes and characteristics of the business, not a one-size-fits-all approach.</span></p>
-                        </div>
-                        <div class="card">
-                            <h3><i class="fas fa-rocket icon"></i> Triển Khai Nhanh Chóng / Rapid Deployment</h3>
-                            <p>Với lợi thế của nền tảng No-code/Low-code, chúng tôi cam kết thời gian triển khai nhanh chóng, giúp doanh nghiệp sớm đưa vào vận hành. <span class="english-text">/ With the advantage of No-code/Low-code platforms, we commit to rapid deployment times, helping businesses go live sooner.</span></p>
-                        </div>
-                        <div class="card">
-                            <h3><i class="fas fa-hand-holding-usd icon"></i> Tối Ưu Chi Phí / Cost-Effective</h3>
-                            <p>Cung cấp giải pháp với chi phí hợp lý, phù hợp với ngân sách của các doanh nghiệp vừa và nhỏ so với các hệ thống ERP truyền thống. <span class="english-text">/ We provide solutions at a reasonable cost, suitable for the budgets of small and medium-sized enterprises compared to traditional ERP systems.</span></p>
-                        </div>
-                        <div class="card">
-                            <h3><i class="fas fa-headset icon"></i> Hỗ Trợ 24/7 / Dedicated Support</h3>
-                            <p>Đội ngũ kỹ thuật luôn sẵn sàng hỗ trợ 24/7, đồng hành cùng doanh nghiệp trong suốt quá trình sử dụng, đảm bảo hệ thống hoạt động ổn định. <span class="english-text">/ Our technical team is always ready to support and accompany businesses throughout the usage process, ensuring stable system operation.</span></p>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <footer class="profile-footer">
-                <span>Version 01-2025 | © EMS Solution</span>
                 <span class="page-number">Trang 3 / 5</span>
             </footer>
         </div>
 
-        <!-- PAGE 4: WORKFLOW & TECHNOLOGY -->
-        <div class="a4-container" id="partners">
-            <header class="profile-header">
-                <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
-                <div class="company-title">
-                    <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
-                    <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
-                </div>
-            </header>
+        <!-- PAGE 4: TOOLS & PARTNERS -->
+        <div class="a4-container" id="tools">
             <main class="page-content">
+                <section>
+                    <h2>CÔNG CỤ & NỀN TẢNG / TOOLS & PLATFORMS</h2>
+                    <div class="tech-stack-grid">
+                        <div class="tool-logo"><img src="https://nforceit.com.au/wp-content/uploads/2023/10/nforceit-partner-google-workspace-logo-800x400.png" alt="Google Workspace"><p>Google Workspace</p></div>
+                        <div class="tool-logo"><img src="https://cdn-1.webcatalog.io/catalog/appsheet/appsheet-icon-filled-256.png" alt="AppSheet"><p>AppSheet</p></div>
+                        <div class="tool-logo"><img src="https://images.seeklogo.com/logo-png/61/2/looker-studio-logo-png_seeklogo-617989.png" alt="Looker Studio"><p>Looker Studio</p></div>
+                        <div class="tool-logo"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" alt="Apps Script"><p>Apps Script</p></div>
+                        <div class="tool-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
+                        <div class="tool-logo"><img src="https://images.icon-icons.com/2699/PNG/512/google_cloud_logo_icon_170066.png" alt="Google Cloud"><p>Google Cloud</p></div>
+                    </div>
+                </section>
                 <section>
                     <h2>ĐỐI TÁC TIÊU BIỂU / KEY PARTNERS</h2>
                     <div class="partners-grid">
-                        <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://upload.wikimedia.org/wikipedia/vi/thumb/b/b5/Vietnam_Airlines_Logo.svg/2560px-Vietnam_Airlines_Logo.svg.png"/></div>
-                        <div class="partner-logo"><img alt="Logo EVN" src="https://upload.wikimedia.org/wikipedia/vi/thumb/6/69/EVN_Logo.svg/1200px-EVN_Logo.svg.png"/></div>
-                        <div class="partner-logo"><img alt="Logo Jollibee" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Jollibee_logo.svg/1200px-Jollibee_logo.svg.png"/></div>
-                        <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://upload.wikimedia.org/wikipedia/vi/thumb/2/28/Bao_Viet_Logo.svg/1200px-Bao_Viet_Logo.svg.png"/></div>
-                        <div class="partner-logo"><img alt="HCDC" src="https://hochiminhcity.gov.vn/documents/20182/4377396/logo_hcdc.png"/></div>
-                    </div>
+<!-- Logo đối tác hiện có -->
+<div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://rubee.com.vn/admin/webroot/upload/image//images/tin-tuc/vietnam-airlines-logo-2.png" /></div>
+<div class="partner-logo"><img alt="Logo EVN" src="https://www.evn.com.vn//userfile/User/tcdl/images/2023/4/14042023_LogoEVN_Ngang_FULL.jpg" /></div>
+<div class="partner-logo"><img alt="Logo Jollibee" src="https://brandlogos.net/wp-content/uploads/2025/05/jollibee_horizontal-logo_brandlogos.net_lrab6.png" /></div>
+<div class="partner-logo"><img alt="Logo Bảo Việt" src="https://i0.wp.com/www.globalsafe.vn/noidung/uploads/2017/10/thiet-ke-logo-baoviet.png?fit=438%2C388&ssl=1" /></div>
+<div class="partner-logo"><img alt="Logo HCDC" src="https://hcdc.vn/public/img/images/news/2019/11/news-1569819039115.png" /></div>
 
-                    <h2>QUY TRÌNH LÀM VIỆC / OUR WORKFLOW</h2>
-                    <div class="grid-2">
-                        <div class="card">
-                            <div class="process-heading">
-                                <i class="fas fa-comments icon-step step-1"></i>
-                                <h4>1. Tư Vấn & Khảo Sát / Consultation</h4>
-                            </div>
-                            <p>Lắng nghe, phân tích nhu cầu và các vấn đề doanh nghiệp đang gặp phải để hiểu rõ bài toán. <span class="english-text">/ Listen to and analyze the client's needs and challenges to fully understand the problem.</span></p>
-                        </div>
-                        <div class="card">
-                            <div class="process-heading">
-                                <i class="fas fa-pencil-ruler icon-step step-2"></i>
-                                <h4>2. Thiết Kế & Báo Giá / Design & Proposal</h4>
-                            </div>
-                            <p>Đề xuất giải pháp tổng thể, thiết kế giao diện, tính năng và báo giá với chi phí tối ưu nhất. <span class="english-text">/ Propose a comprehensive solution, design the interface and features, and provide a quote with the most optimized cost.</span></p>
-                        </div>
-                        <div class="card">
-                            <div class="process-heading">
-                                <i class="fas fa-cogs icon-step step-3"></i>
-                                <h4>3. Phát Triển & Triển Khai / Development</h4>
-                            </div>
-                            <p>Xây dựng, kiểm thử và bàn giao sản phẩm theo đúng cam kết về tiến độ và chất lượng. <span class="english-text">/ Build, test, and deliver the product in accordance with commitments on schedule and quality.</span></p>
-                        </div>
-                        <div class="card">
-                            <div class="process-heading">
-                                <i class="fas fa-life-ring icon-step step-4"></i>
-                                <h4>4. Hỗ Trợ & Bảo Trì / Support & Maintenance</h4>
-                            </div>
-                            <p>Đồng hành, bảo hành và hỗ trợ kỹ thuật trong suốt quá trình vận hành để đảm bảo hệ thống hoạt động ổn định. <span class="english-text">/ Provide ongoing companionship, warranty, and technical support throughout the operational process to ensure stable system performance.</span></p>
-                        </div>
+<!-- Logo khách hàng bổ sung -->
+<div class="partner-logo"><img alt="Logo Huy Phát Packaging" src="http://baobihuyphat.com/upload/hinhanh/logo-6524.png" /></div>
+<div class="partner-logo"><img alt="Logo In Royal" src="https://teamkcn.com/uploads/2255/news/2023/06/11/logo-thinh-in-1686458201.jpg" /></div>
+<div class="partner-logo"><img alt="Logo In Hoàng Thị" src="https://logo.trangvangvietnam.com/L39567162400-1.gif" /></div>
+<div class="partner-logo"><img alt="Logo Kasura Vietnam" src="https://cdn1.vieclam24h.vn/tvn/images/default/2021/10/08/images/163367803978.png" /></div>
+<div class="partner-logo"><img alt="Logo Alpha Autosystem" src="https://alpha-as.com.vn/wp-content/uploads/2023/12/%E4%BC%9A%E7%A4%BE%E3%83%AD%E3%82%B4-removebg-preview.png" /></div>
+<div class="partner-logo"><img alt="Logo Karcher Vietnam" src="https://theme.hstatic.net/200000293640/1000696855/14/logo.png?v=2313" /></div>
+<div class="partner-logo"><img alt="Logo Ratraco" src="https://hnla.com.vn/wp-content/uploads/2023/07/logo-ratraco-slogan-Hung-Nguyen-Xuan-1024x321.png" /></div>
+<div class="partner-logo"><img alt="Logo VA Schools" src="https://vaschools.edu.vn/wp-content/uploads/2025/05/LogoKyLan-01.png" /></div>
+<div class="partner-logo"><img alt="Logo IntBox" src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODAwMzYwLCJwdXIiOiJibG9iX2lkIn19--16be2b048db11b1e2a9bf572800e8f017e7dda44/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e1d036817a0840c585f202e70291f5cdd058753d/intbox-logo.png" /></div>
+<div class="partner-logo"><img alt="Logo NBN Media" src="https://jobseekers.vn/wp-content/uploads/2018/04/LOGO-NBN.png" /></div>
+
+                        
                     </div>
                 </section>
             </main>
@@ -1577,13 +1685,6 @@
         
         <!-- PAGE 5: TEAM & CONTACT -->
         <div class="a4-container" id="team">
-            <header class="profile-header">
-                <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
-                <div class="company-title">
-                    <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
-                    <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
-                </div>
-            </header>
             <main class="page-content">
                 <section>
                     <h2>ĐỘI NGŨ CHUYÊN GIA / OUR EXPERTS</h2>
@@ -1620,13 +1721,6 @@
 
         <!-- Contact Section -->
         <div class="a4-container" id="contact">
-            <header class="profile-header">
-                <div class="logo"><img src="https://gpems.net/_next/image?url=%2Flogo-ico.png&w=64&q=75" alt="EMS Solution Logo"></div>
-                <div class="company-title">
-                    <h1>CÔNG TY TNHH GIẢI PHÁP SỐ EMS <span class="company-en">(EMS SOLUTION)</span></h1>
-                    <p class="slogan"><em>YOUR SYSTEM OUR SOLUTION</em></p>
-                </div>
-            </header>
             <main class="page-content">
                 <section>
                     <h2>LIÊN HỆ / CONTACT</h2>
@@ -1835,12 +1929,12 @@
                 <section>
                     <h2>CÔNG CỤ & NỀN TẢNG / TOOLS & PLATFORMS</h2>
                     <div class="tech-stack-grid">
-                        <div class="tool-logo"><img src="https://www.google.com/images/icons/product/workspaces-16.svg" alt="Google Workspace"><p>Google Workspace</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/dashboard_black_48dp.png" alt="AppSheet"><p>AppSheet</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/bar_chart_black_48dp.png" alt="Looker Studio"><p>Looker Studio</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/code_black_48dp.png" alt="Apps Script"><p>Apps Script</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/smart_toy_black_48dp.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
-                        <div class="tool-logo"><img src="https://www.gstatic.com/images/icons/material/system/1x/cloud_black_48dp.png" alt="Google Cloud"><p>Google Cloud</p></div>
+                        <div class="tool-logo"><img src="https://nforceit.com.au/wp-content/uploads/2023/10/nforceit-partner-google-workspace-logo-800x400.png" alt="Google Workspace"><p>Google Workspace</p></div>
+                        <div class="tool-logo"><img src="https://cdn-1.webcatalog.io/catalog/appsheet/appsheet-icon-filled-256.png" alt="AppSheet"><p>AppSheet</p></div>
+                        <div class="tool-logo"><img src="https://images.seeklogo.com/logo-png/61/2/looker-studio-logo-png_seeklogo-617989.png" alt="Looker Studio"><p>Looker Studio</p></div>
+                        <div class="tool-logo"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" alt="Apps Script"><p>Apps Script</p></div>
+                        <div class="tool-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png" alt="AI Agent - Gemini"><p>AI Agent (Gemini)</p></div>
+                        <div class="tool-logo"><img src="https://images.icon-icons.com/2699/PNG/512/google_cloud_logo_icon_170066.png" alt="Google Cloud"><p>Google Cloud</p></div>
                     </div>
                 </section>
                 <section>
@@ -1884,11 +1978,11 @@
                 <section>
                     <h2>ĐỐI TÁC TIÊU BIỂU / KEY PARTNERS</h2>
                     <div class="partners-grid">
-                        <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://upload.wikimedia.org/wikipedia/vi/thumb/b/b5/Vietnam_Airlines_Logo.svg/2560px-Vietnam_Airlines_Logo.svg.png"/></div>
-                        <div class="partner-logo"><img alt="Logo EVN" src="https://upload.wikimedia.org/wikipedia/vi/thumb/6/69/EVN_Logo.svg/1200px-EVN_Logo.svg.png"/></div>
-                        <div class="partner-logo"><img alt="Logo Jollibee" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Jollibee_logo.svg/1200px-Jollibee_logo.svg.png"/></div>
-                        <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://upload.wikimedia.org/wikipedia/vi/thumb/2/28/Bao_Viet_Logo.svg/1200px-Bao_Viet_Logo.svg.png"/></div>
-                        <div class="partner-logo"><img alt="HCDC" src="https://hochiminhcity.gov.vn/documents/20182/4377396/logo_hcdc.png"/></div>
+                        <div class="partner-logo"><img alt="Logo Vietnam Airlines" src="https://rubee.com.vn/admin/webroot/upload/image//images/tin-tuc/vietnam-airlines-logo-2.png"/></div>
+                        <div class="partner-logo"><img alt="Logo EVN" src="https://www.evn.com.vn//userfile/User/tcdl/images/2023/4/14042023_LogoEVN_Ngang_FULL.jpg"/></div>
+                        <div class="partner-logo"><img alt="Logo Jollibee" src="https://brandlogos.net/wp-content/uploads/2025/05/jollibee_horizontal-logo_brandlogos.net_lrab6.png"/></div>
+                        <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://i0.wp.com/www.globalsafe.vn/noidung/uploads/2017/10/thiet-ke-logo-baoviet.png?fit=438%2C388&ssl=1"/></div>
+                        <div class="partner-logo"><img alt="HCDC" src="https://hcdc.vn/public/img/images/news/2019/11/news-1569819039115.png"/></div>
                     </div>
 
                     <h2>QUY TRÌNH LÀM VIỆC / OUR WORKFLOW</h2>
@@ -1996,7 +2090,7 @@
         // View mode variables
         let currentView = 'print';
         let currentSlide = 0;
-        const totalSlides = 5;
+        const totalSlides = 7;
         
         // Set view mode function
         function setViewMode(mode) {
@@ -2105,7 +2199,7 @@
                 navItems.forEach(item => item.classList.remove('active'));
                 
                 // Find and activate the corresponding nav item
-                const sectionIndex = ['about', 'solutions', 'tools', 'partners', 'team', 'contact'].indexOf(sectionId);
+                const sectionIndex = ['about', 'solutions', 'flow', 'tools', 'partners', 'team', 'contact'].indexOf(sectionId);
                 if (sectionIndex !== -1 && navItems[sectionIndex]) {
                     navItems[sectionIndex].classList.add('active');
                 }
@@ -2165,7 +2259,7 @@
         // Update active nav item on scroll for landing view
         window.addEventListener('scroll', () => {
             if (currentView === 'landing') {
-                const sections = ['about', 'solutions', 'tools', 'partners', 'team', 'contact'];
+                const sections = ['about', 'solutions', 'flow', 'tools', 'partners', 'team', 'contact'];
                 const navItems = document.querySelectorAll('.landing-nav-item');
                 
                 // Find the current section in view
