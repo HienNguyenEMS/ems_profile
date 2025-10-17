@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="vi">
@@ -8,7 +7,7 @@
 <title>Hồ sơ năng lực v01-2025 (Final) - EMS Solution</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 <style>
         :root {
@@ -557,113 +556,125 @@
             margin: 0;
             padding: 0;
         }
-body.slide-view .a4-container {
-    width: 96%;
-    height: 96%;
-    margin: auto;
-    box-shadow: none;
-    min-height: auto;
-    padding: 30px 40px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    overflow-x: hidden;
-    border-radius: 12px;
-    background-color: white;
-    transform: none; /* bỏ scale gây cắt nội dung */
-    zoom: 1.15; /* phóng to toàn nội dung nhẹ nhàng, không cắt */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
-/* Giúp chữ lớn hơn nhưng không vỡ layout */
-body.slide-view {
-    font-size: 1.25em;
-    line-height: 1.5;
-}
+        body.slide-view .a4-container {
+            width: 90%;
+            height: 90vh;
+            margin: auto;
+            box-shadow: none;
+            min-height: auto;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            overflow-x: hidden;
+            border-radius: 12px;
+            background-color: white;
+            transform: none; /* bỏ scale gây cắt nội dung */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Thay đổi từ space-between để tránh nội dung bị dàn quá mỏng */
+        }
 
-body.slide-view .page-content {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding-bottom: 30px;
-}
+        /* Giúp chữ lớn hơn nhưng không vỡ layout */
+        body.slide-view {
+            font-size: 1.1em; /* Giảm kích thước font tổng thể */
+            line-height: 1.4;
+        }
 
+        body.slide-view .page-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding-bottom: 30px;
+        }
 
-        /* Increased font sizes for slide view */
+        /* Increased font sizes for slide view - Điều chỉnh lại để vừa khung */
         body.slide-view h1 {
-            font-size: 23pt !important;
-        }
-        
-        body.slide-view h2 {
-            font-size: 22pt !important;
-        }
-        
-        body.slide-view h3 {
-            font-size: 18pt !important;
-        }
-        
-        body.slide-view h4 {
-            font-size: 17pt !important;
-        }
-        
-        body.slide-view p {
-            font-size: 17pt !important;
-        }
-        
-        body.slide-view .english-text {
-            font-size: 16pt !important;
-        }
-        
-        body.slide-view .kpi-card .number {
-            font-size: 30pt !important;
-        }
-        
-        body.slide-view .kpi-card .label {
-            font-size: 14pt !important;
-        }
-        
-        body.slide-view .contact-info-list {
-            font-size: 16pt !important;
-        }
-        
-        body.slide-view .profile-footer {
-            font-size: 14pt !important;
-        }
-        
-        body.slide-view .tool-logo p {
-            font-size: 14pt !important;
-        }
-        
-        body.slide-view .expert-card h4 {
-            font-size: 17pt !important;
-        }
-        
-        body.slide-view .expert-card p {
-            font-size: 15pt !important;
-        }
-        
-        body.slide-view .flow-solution h3 {
             font-size: 20pt !important;
         }
         
+        body.slide-view h2 {
+            font-size: 18pt !important;
+        }
+        
+        body.slide-view h3 {
+            font-size: 16pt !important;
+        }
+        
+        body.slide-view h4 {
+            font-size: 15pt !important;
+        }
+        
+        body.slide-view p {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .english-text {
+            font-size: 13pt !important;
+        }
+        
+        body.slide-view .kpi-card .number {
+            font-size: 26pt !important;
+        }
+        
+        body.slide-view .kpi-card .label {
+            font-size: 12pt !important;
+        }
+        
+        body.slide-view .contact-info-list {
+            font-size: 14pt !important;
+        }
+        
+        body.slide-view .profile-footer {
+            font-size: 12pt !important;
+        }
+        
+        body.slide-view .tool-logo p {
+            font-size: 12pt !important;
+        }
+        
+        body.slide-view .expert-card h4 {
+            font-size: 15pt !important;
+        }
+        
+        body.slide-view .expert-card p {
+            font-size: 13pt !important;
+        }
+        
+        body.slide-view .flow-solution h3 {
+            font-size: 16pt !important;
+        }
+        
         body.slide-view .flow-solution p {
-            font-size: 17pt !important;
+            font-size: 14pt !important;
         }
         
         body.slide-view .flow-step h4 {
-            font-size: 17pt !important;
+            font-size: 14pt !important;
         }
         
         body.slide-view .flow-step p {
-            font-size: 16pt !important;
+            font-size: 13pt !important;
         }
         
         body.slide-view .flow-use-case h4 {
-            font-size: 17pt !important;
+            font-size: 14pt !important;
         }
         
         body.slide-view .flow-use-case p {
-            font-size: 16pt !important;
+            font-size: 13pt !important;
+        }
+
+        /* Đảm bảo logo đối tác hiển thị đầy đủ trong slide view */
+        body.slide-view .partners-grid {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            padding: 10px 0;
+        }
+        
+        body.slide-view .partner-logo img {
+            height: 35px; /* Giảm kích thước logo để vừa khung */
+            max-width: 100%;
+            object-fit: contain;
         }
 
         body.slide-view .slide-nav {
@@ -1359,6 +1370,20 @@ body.slide-view .page-content {
 <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://i0.wp.com/www.globalsafe.vn/noidung/uploads/2017/10/thiet-ke-logo-baoviet.png?fit=438%2C388&amp;ssl=1"/></div>
 <div class="partner-logo"><img alt="HCDC" src="https://hcdc.vn/public/img/images/news/2019/11/news-1569819039115.png"/></div>
 </div>
+<div class="partners-grid">
+<div class="partner-logo"><img alt="Logo In Phú Thiện" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt9YMRsLr_S590QXZ5dplKTlIO8Jk-UggKEg&amp;s%22"/></div>
+<div class="partner-logo"><img alt="Logo In Royal" src="https://github.com/okido87/AppSheet_Print_Form/blob/main/royal.jpg?raw=true"/></div>
+<div class="partner-logo"><img alt="Logo In Hoàng Thị" src="https://logo.trangvangvietnam.com/L39567162400-1.gif"/></div>
+<div class="partner-logo"><img alt="Logo Kasura Vietnam" src="https://cdn1.vieclam24h.vn/tvn/images/default/2021/10/08/images/163367803978.png"/></div>
+<div class="partner-logo"><img alt="Logo Alpha Autosystem" src="https://alpha-as.com.vn/wp-content/uploads/2023/12/%E4%BC%9A%E7%A4%BE%E3%83%AD%E3%82%B4-removebg-preview.png"/></div>
+</div>
+<div class="partners-grid">
+<div class="partner-logo"><img alt="Logo Karcher Vietnam" src="https://theme.hstatic.net/200000293640/1000696855/14/logo.png?v=2313"/></div>
+<div class="partner-logo"><img alt="Logo Ratraco" src="https://hnla.com.vn/wp-content/uploads/2023/07/logo-ratraco-slogan-Hung-Nguyen-Xuan-1024x321.png"/></div>
+<div class="partner-logo"><img alt="Logo VA Schools" src="https://vaschools.edu.vn/wp-content/uploads/2025/05/LogoKyLan-01.png"/></div>
+<div class="partner-logo"><img alt="Logo IntBox" src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODAwMzYwLCJwdXIiOiJibG9iX2lkIn19--16be2b048db11b1e2a9bf572800e8f017e7dda44/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszMDAsMzAwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--e1d036817a0840c585f202e70291f5cdd058753d/intbox-logo.png"/></div>
+<div class="partner-logo"><img alt="Logo NBN Media" src="https://jobseekers.vn/wp-content/uploads/2018/04/LOGO-NBN.png"/></div>
+</div>
 </section>
 </main>
 <footer class="profile-footer">
@@ -1660,12 +1685,16 @@ body.slide-view .page-content {
 <div class="partner-logo"><img alt="Logo Jollibee" src="https://brandlogos.net/wp-content/uploads/2025/05/jollibee_horizontal-logo_brandlogos.net_lrab6.png"/></div>
 <div class="partner-logo"><img alt="Logo Bảo Việt" src="https://i0.wp.com/www.globalsafe.vn/noidung/uploads/2017/10/thiet-ke-logo-baoviet.png?fit=438%2C388&amp;ssl=1"/></div>
 <div class="partner-logo"><img alt="Logo HCDC" src="https://hcdc.vn/public/img/images/news/2019/11/news-1569819039115.png"/></div>
+</div>
+<div class="partners-grid">
 <!-- Dòng 2 -->
-<div class="partner-logo"><img alt="Logo In Phú Thiện" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt9YMRsLr_S590QXZ5dplKTlIO8Jk-UggKEg&s%22"/></div>
+<div class="partner-logo"><img alt="Logo In Phú Thiện" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt9YMRsLr_S590QXZ5dplKTlIO8Jk-UggKEg&amp;s%22"/></div>
 <div class="partner-logo"><img alt="Logo In Royal" src="https://github.com/okido87/AppSheet_Print_Form/blob/main/royal.jpg?raw=true"/></div>
 <div class="partner-logo"><img alt="Logo In Hoàng Thị" src="https://logo.trangvangvietnam.com/L39567162400-1.gif"/></div>
 <div class="partner-logo"><img alt="Logo Kasura Vietnam" src="https://cdn1.vieclam24h.vn/tvn/images/default/2021/10/08/images/163367803978.png"/></div>
 <div class="partner-logo"><img alt="Logo Alpha Autosystem" src="https://alpha-as.com.vn/wp-content/uploads/2023/12/%E4%BC%9A%E7%A4%BE%E3%83%AD%E3%82%B4-removebg-preview.png"/></div>
+</div>
+<div class="partners-grid">
 <!-- Dòng 3 -->
 <div class="partner-logo"><img alt="Logo Karcher Vietnam" src="https://theme.hstatic.net/200000293640/1000696855/14/logo.png?v=2313"/></div>
 <div class="partner-logo"><img alt="Logo Ratraco" src="https://hnla.com.vn/wp-content/uploads/2023/07/logo-ratraco-slogan-Hung-Nguyen-Xuan-1024x321.png"/></div>
